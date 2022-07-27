@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import re_path, include
 
+# Add all URL Patterns before the ones already present.
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^', include('cms.urls')),
