@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'treebeard',
     'optimus',
     'sekizai',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
