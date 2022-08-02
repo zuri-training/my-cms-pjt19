@@ -1,1 +1,0 @@
-This folder contains the designs from the product managers
