@@ -48,12 +48,7 @@ See [`CONTRIBUTING.md`](https://github.com/zuri-training/my-cms-pjt19/blob/main/
 ## Useful Resources
 
 - [Database Schema](https://bit.ly/Team19_databaseSchema)
-
-<<<<<<< HEAD
 - [Designs from the Product Design Team](https://bit.ly/Team19_myCMS_optimusDesign)
-=======
-- [Designs from the Product Design Team](https://bit.ly/Team19_myCMS_optimusDesign)
->>>>>>> 388f0d96ac79f21ad627221c52b13fb394ce3d77
 
 ## Contributors
 
