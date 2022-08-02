@@ -1,1 +1,0 @@
-This folder contains the templates designed by the FrontEnd developers

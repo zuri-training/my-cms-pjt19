@@ -43,9 +43,12 @@ INSTALLED_APPS = [
     'cms',
     'menus',
     'treebeard',
-    'optimus',
     'sekizai',
     'rest_framework',
+
+    # Local Apps
+    'apps.optimus.apps.OptimusConfig',
+    'apps.common.apps.CommonConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +72,7 @@ ROOT_URLCONF = 'mycms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

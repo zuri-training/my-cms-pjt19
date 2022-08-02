@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class OptimusConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'optimus'
+    name = 'apps.optimus'
