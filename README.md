@@ -49,7 +49,7 @@ See [`CONTRIBUTING.md`](https://github.com/zuri-training/my-cms-pjt19/blob/main/
 
 - [Database Schema](https://bit.ly/Team19_databaseSchema)
 
-- [Designs from the Product Design Team](https://github.com/zuri-training/my-cms-pjt19)
+- [Designs from the Product Design Team](https://bit.ly/Team19_myCMS_optimusDesign)
 
 ## Contributors
 
