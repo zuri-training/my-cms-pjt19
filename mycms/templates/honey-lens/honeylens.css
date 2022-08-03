@@ -1,0 +1,217 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Qwitcher+Grypen:wght@700&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	/* box-sizing: border-box; */
+
+}
+.navbar{
+	position: absolute;
+	top: 0;
+	z-index: 99999;
+	padding:50px 0;
+}
+
+
+.navbar ul.nav li:hover{
+	background:rgba(255, 255, 255, 0.5);
+	color: #000;
+
+}
+.navbar ul.nav li a{
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+/*slider*/
+#honeyLensCarousel{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+#honeyLensCarousel .carousel-inner{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	/* background: #000; */
+}
+#honeyLensCarousel .carousel-inner:before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+#honeyLensCarousel .carousel-inner .carousel-item{
+	position: relative;
+	height: 100%;
+	width:100%;
+	background: url(./honeylensimages/Desktop\ -\ 3.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+#honeyLensCarousel .carousel-inner .carousel-item:nth-child(2){
+	background: url(./honeylensimages/Property\ 1=Variant2.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+#honeyLensCarousel .carousel-inner .carousel-item:nth-child(3){
+	background: url(./honeylensimages/Property\ 1=Variant3.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+#honeyLensCarousel .carousel-inner .carousel-item:nth-child(4){
+	background: url(./honeylensimages/Property\ 1=Variant4.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+#honeyLensCarousel .carousel-inner .carousel-item .info{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: auto;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+}
+#honeyLensCarousel .carousel-inner .carousel-item h1{
+	height: auto;
+	color: #fff;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+    letter-spacing: 5px;
+    font-family: 'Quattrocento Sans', sans-serif;
+	font-size: 4.5em;
+	/* font-weight: 750; */
+}
+
+#honeyLensCarousel .carousel-indicators li {
+	width: 14px;
+	height: 14px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+
+#wedding, 
+#birthdays, 
+#real-estate,
+#nature{
+	position: relative;
+}
+
+#wedding .row .wedding-text,
+ #real-estate .real-estate-text{
+	position: absolute;
+	padding-left: 20px;
+	z-index: 999;
+	margin: 0 auto;
+	left: 60%;
+	right: 0;
+	top: 40%; 
+	opacity: 0.8;
+	width: 30%;
+	color: #ffff;
+	border-radius: 5px;
+}
+
+#wedding .row .wedding-text{
+	background-color: #8f5741;	
+}
+
+#birthdays .row .birthday-text{
+	background-color: #dd901d;
+	
+}
+#real-estate .real-estate-text{
+	background-color:#98A735E5 ;
+}
+#nature .row .nature-text{
+	background-color: rgba(116, 169, 190, 0.9);
+	
+}
+#birthdays .row .birthday-text,
+#nature .row .nature-text{
+	position: absolute;
+	padding-left: 20px;
+	z-index: 999;
+	opacity: 0.8;
+	margin: 0 auto;
+	left: 10%;
+	right: 10;
+	top: 30%;
+	width: 30%;
+	color: #ffff;
+	border-radius: 5px;
+}
+
+#birthdays .row .birthday-text h1, 
+#wedding .row .wedding-text h1, 
+#real-estate .row .real-estate-text h1,
+#nature .row .nature-text h1{
+	font-family: 'Qwitcher Grypen', cursive;
+	font-size: 80px;
+	font-weight: 700;
+	text-align: center;
+}
+#birthdays .row .birthday-text h3, 
+#wedding .row .wedding-text h3,
+#real-estate .row .real-estate-text h3,
+#nature .row .nature-text h3{
+	font-family: 'Quattrocento Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+}
+
+/* #birthdays .row .birthday-text p, #wedding .row .wedding-text p{
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-style: normal;
+	font-size: 20px;
+	font-weight: 400;
+	color: #ffff;
+} */
+
+.hl-inquire{
+	font-family: 'Quattrocento Sans';
+	font-weight: 700;
+	font-size: 32px;
+	display: flex;
+	gap: 16px;
+	
+}
+
+#hl-footer{
+	background-color: #F5F5F5;
+	text-align: center;
+}
+#hl-footer .hl-logo{
+	-webkit-filter: invert(100%); 
+    filter: invert(100%);
+	padding: 50px;
+
+}
+#hl-footer .hlfootericons, #hl-footer .hl-footercontact {
+	display: flex;
+	padding: 50px;
+	
+}
+#hl-footer .hl-footercontact  {
+	justify-content: center;
+	
+
+}
