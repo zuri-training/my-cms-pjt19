@@ -1,0 +1,106 @@
+/* Title Section */
+.title-section {
+    background-color: #F1F1F1;
+    border-top: 50px;
+}
+
+.title-section-button {
+    margin-right: 12px;
+}
+
+.title-section-content {
+    margin-top: 50px;
+}
+
+
+
+/* Gallery Section */
+
+#view-more {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* .gallery-section {
+    padding-bottom: 15%;
+} */
+
+
+
+.image-caption {
+    text-align: center;
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#gallery-heading {
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Carousel Section */
+
+.carousel-section {
+    padding: 50px 30px 30px 50px;
+    text-align: center;
+    background-color: #F1F1F1;
+}
+
+.carousel-paragraph {
+    padding-top: 3%;
+}
+
+.carousel-image {
+    text-align: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+#product {
+    font-size: 18px;
+}
+
+
+
+/* Message Me Section */
+
+.message-section-text {
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+
+.message-me {
+    padding: 50px 30px 30px 50px;
+}
+
+  /* Footer Section */
+
+.footer-section {
+    background-color: #EDE6DB;
+    padding: 50px 30px 30px 50px;
+}
+
+#ironhide-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
