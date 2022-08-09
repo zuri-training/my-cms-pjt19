@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'treebeard',
     'sekizai',
     'rest_framework',
+    'accounts'
 
     # Local Apps
     'apps.optimus.apps.OptimusConfig',
@@ -92,6 +93,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mycms.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
