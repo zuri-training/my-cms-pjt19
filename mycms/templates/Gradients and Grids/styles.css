@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Open+Sans&family=Roboto:wght@500&display=swap');
+
+.btn {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+li{
+    list-style: none;
+    padding: 10px 40px 10px 0;
+    display: inline;
+    font-size: 20px;
+}
+
+
+#land{
+    background: url(IMGs/Rectangle\ 130.png);
+    background-size: cover;
+    height: 638px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bckg{
+    background-color: #F5F5F5;
+}
+
+#link{
+    display: inline;
+    text-decoration: none;
+}
+
+#linktwo{
+    display: inline;
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.active{
+    color: #D0D5DD;
+}
+
+.middle{
+    padding-top: 25vh;
+font-family: 'Chakra Petch';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 62px;
+color: #FCFCFD;
+}
+
+.shift{
+    float: right;
+    padding: 10px;
+    padding-top: 10px;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+color: #FCFCFD;
+}
+
+.bgpurp{
+background: #5720B7;
+border-radius: 4px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+padding: 8px 20px;
+border: 3px solid#5720B7;
+}
+
+.bgpurp :hover{
+    color: #ffffff;
+}
+
+.purp{
+    border: 3px solid#5720B7;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+color: #344054;
+padding: 8px 20px;
+}
+
+.purp :hover{
+    color: #ffffff;
+    background-color: #6f42c1;
+}
+
+.border{
+    border-radius: 0;
+    background-color: #D5D9EB;
+}
+
+.blued{
+    width: 182px;
+height: 30px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
+color: #293056;
+background-color: #D5D9EB;
+}
+
+
+.card-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.card-text {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+input {
+    padding: 17px 75px;
+gap: 10px;
+
+width: 491px;
+height: 62px;
+
+/* Gray/50 */
+
+background: #F9FAFB;
+/* Blue dark / 900 */
+
+border: 2px solid #00359E;
+}
+
+::placeholder {
+    width: 341px;
+height: 28px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: 0.02em;
+color: #475467;
+}
+
+.foot {
+    width: 100%;
+
+/* Gray blue/300 */
+
+background: #B3B8DB;
+
+}
+
+.sub {
+    width: 169px;
+height: 30px;
+padding-top: 65px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 30px;
+/* identical to box height, or 94% */
+
+text-align: center;
+
+/* Gray b
+lue/800 */
+
+color: #293056;
+
+}
+
+.sub-pt {
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 3px;
+
+width: 491px;
+height: 62px;
+
+/* Blue dark / 800 */
+
+background: #0040C1;
+
+}
+
+.subcap {
+    width: 305px;
+height: 28px;
+padding-top: 5px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 28px;
+letter-spacing: 0.02em;
+
+/* Gray/25 */
+
+color: #FCFCFD;
+
+}
+
+.last-text {
+    width: 544px;
+height: 211px;
+padding-top: 45px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* or 125% */
+
+text-align: center;
+
+/* Gray blue/800 */
+
+color: #293056;
+
+}
+
+.abt {
+    width: 128px;
+height: 30px;
+padding-top: 65px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 30px;
+/* identical to box height, or 94% */
+
+text-align: center;
+
+/* Gray blue/800 */
+
+color: #293056;
+
+}
+
+.card {
+    border-radius: 25px;
+}
+
+.like {
+    padding-right: 40px;
+    padding-bottom: 70px;
+}
+
+.last {
+    
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height, or 125% */
+
+text-align: center;
+
+/* Gray blue/800 */
+
+color: #293056;
+}
+
+span {
+    padding-top: 90px;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    body{
+        width: 100%;
+height: auto;
+text-align: center;
+align-items: center;
+    }
+#land {
+width: 100%;
+height: vh;
+left: 0px;
+top: 24.98px;
+
+background: url(IMGs/Rectangle\ 130.png);
+}
+
+.card{
+    box-sizing: border-box;
+width: 366.18px;
+height: 387px;
+left: 24px;
+top: 324px;
+padding-top: 0;
+
+background: rgba(245, 248, 255, 0.2);
+/* Neutral/100 */
+
+border: 0.540503px solid #D4D0CE;
+border-radius: 10.8101px;
+}
+
+.bgpurp{
+    background: #5720B7;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    padding: 8px 20px;
+    border: 3px solid#5720B7;
+    float: right;
+    }
+    
+    .bgpurp :hover{
+        color: #ffffff;
+    }
+    
+    .purp{
+        border: 2px solid#5720B7;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+    color: #344054;
+    padding: 8px 20px;
+    float: right;
+    }
+    
+    .purp :hover{
+        color: #ffffff;
+        background-color: #6f42c1;
+    }
+
+    .shift{
+        padding-left: 50px;
+        padding-right: 0;
+    }
+
+    .foot{
+        position: relative;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+    }
+
+    .gp{
+        padding-bottom: 330px;
+    }
+
+    .abt{
+        text-align: center;
+        float: none;
+    }
+
+    .last-text{
+        text-align: center;
+        left: 0;
+        padding-left: 0;
+    }
+
+    #noone{
+        list-style: none;
+        padding: 10px 10px 10px 0;
+        display: inline;
+        font-size: 20px;
+        clear: both;
+        float: right;
+        left: 0;
+    }
+
+    main{
+        background: url(IMGs/Rectangle\ 130.png);
+        background-size: cover;
+        height: 638px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
