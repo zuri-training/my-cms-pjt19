@@ -2,7 +2,7 @@
 
 ## my-cms-pjt_19
 
-|*Name*|**Nwanze Charity|
+|*Name*|**Nwanze Charity Nkechi**|
 
 |*Student ID*/**I4G001724IOI**|
 
