@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static%}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet"  type="text/css" href="{% static './css/home.css'%}">
+  <title>Optimus CMS | Spin up websites without knowing how to code!</title>
+</head>
+<body>
+
+  <header id="showcase">
+
+    <dmgv class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index"><img src="{% static './images/optimus/Frame 60200.png' %}" alt="optimus logo" width="155px"></a>
+        </div>
+  
+        <div class="links">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a class="link-btn" href="/login">Login</a></li>
+            <li><a class="link-btn btn-primary" href="/sign-up">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="showcase-content">
+      <h1>The countless versatile templates</h1>
+      <p>Optimus is a content management system that allows you create landing pages and other effective digital tools.</p>
+      <button class="btn-primary" href="/sign-up">Get Started</button>
+    </div>
+
+  </header>
+
+  <section id="templates">
+    <h2>Our templates</h2>
+    <div class="gridview">
+      <div class="box-lg">
+        <img src="{% static './images/optimus/photography porfolio.png'%}" alt="photography portfolio" width="345px">
+        <div class="box-txt">
+          <h5>Portfolio</h5>
+          <a href="#">view templates</a>
+        </div>
+      </div>
+
+      <div class="box-lg">
+        <img src="{% static './images/optimus/Logistics 1.png'%}" alt="landing" width="345px">
+        <div class="box-txt">
+          <h5>Landing Page</h5>
+          <a href="#">view templates</a>
+        </div>
+      </div>
+
+      <div class="box-lg">
+        <img src="{% static './images/optimus/Photography.png'%}" alt="blog" width="345px">
+        <div class="box-txt">
+          <h5>Blog</h5>
+          <a href="#">view templates</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h3>Why Optimus?</h3>
+
+    <div class="flexbox">
+      <div class="box-sm">
+        <img src="{% static './images/optimus/Frame 60301.png'%}" alt="Search engine friendly" width="54px">
+        <h5>Search engine friendly</h5>
+        <p>Our templates are very friendly with search engine optimization.</p>
+      </div>
+
+      <div class="box-sm">
+        <img src="{% static './images/optimus/Frame 60302.png' %}" alt="Responsive Mobile"  width="54px">
+        <h5>Responsive mobile</h5>
+        <p>Enjoy the responsive feel of your projects even on a small screen.</p>
+      </div>
+
+      <div class="box-sm">
+        <img src="{% static './images/optimus/Frame 60300.png' %}" alt="Unlimited downloads" width="54px">
+        <h5>Unlimited downloads</h5>
+        <p>Download templates as many times as possible without charge</p>
+      </div>
+
+      <div class="box-sm">
+        <img src="{% static './images/optimus/Frame 60301-1.png' %}" alt="Customizable templates" width="54px">
+        <h5>Customizable templates</h5>
+        <p>Launch your products easily with our free customizable templates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quarterly">
+    <h2>Free templates every quarter</h2>
+
+    <div class="box-container">
+      <div class="box-md">
+        <img src="{% static './images/optimus/Hero Page.png' %}" alt="artOfWill" width="164px">
+      </div>
+
+      <div class="box-md">
+        <img src="{%static './images/optimus/Frame 60511.png' %}" alt="food" width="164px">
+      </div>
+
+      <div class="box-md">
+        <img src="{% static './images/optimus/Design 1.png' %}" alt="photo-img" width="164px">
+      </div>
+
+      <div class="box-md">
+        <img src="{% static './images/optimus/Group 60031.png' %}" alt="birthday" width="164px">
+      </div>
+    </div>
+
+    <button class="btn-primary">Get Started</button>
+  </section>
+
+  <section id="get-started">
+    <div class="details">
+      <h3>Get started with Optimus</h3>
+      <p>Use Optimus to create your landing pages and other effective digital tools</p>
+      <button class="btn-primary">Get Started</button>
+    </div>
+
+    <div class="flex-img">
+      <img src="{%static './images/optimus/Frame 60312.png'%}" alt="a woman wearing glasses" width="400px">
+    </div>
+  </section>
+
+  <footer id="footer-main">
+    <div class="container">
+      <div class="templates">
+        <h3>Templates</h3>
+        <ul>
+          <li><a href="#">Landing page</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+  
+      <div class="career">
+        <h3>Career</h3>
+        <ul>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Contact support</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <div class="partners">
+        <h3>Partners</h3>
+        <ul>
+          <li><a href="#">Partner with us</a></li>
+        </ul>
+      </div>
+  
+      <div>
+      </div>
+  
+      <div class="footer-details">
+        <ul>
+          <li><a class="border-end" href="">Terms and conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </ul>
+  
+        <p>&copy; 2022 Optimus Limited</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+  <script src="{%static './js/home.js'%}"></script>
+</body>
+</html>
