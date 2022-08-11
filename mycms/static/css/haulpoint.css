@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto&display=swap');
+/*navbar */
+body{
+  font-family: 'Roboto', sans-serif;
+}
+@media screen and (min-width: 599px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    padding: 1rem;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links li{
+    list-style: none;
+  }
+  .links a { text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+  }
+  .links a:hover {
+     
+    color:#e04f16;
+    padding-left: 1.5rem;
+  }
+  .logo{
+    width: 150px;
+  }
+  .sign-up{ border-color: #e04f16;
+    background: transparent;
+    border: 1px solid #e04f16;
+    width: 90px;
+    height: 32px;
+    color: #e04f16;
+   
+  }
+ ul button .sign-up :hover{
+   color: black;
+  }
+  .show-links {
+    height: 20rem;
+  }
+  /*header */
+.text{
+  position: relative;
+  top: -40px;
+  font-weight: 700;
+}
+#text{
+  font-size: 18px;
+  padding-top: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+  #illustration{
+  width: 60rem;
+  padding-bottom: 40px;
+  }
+.btn-text{
+  padding-top: 30px;
+}
+  .get-started{ border: none;
+    color: white;
+    background-color:#e04f16;
+    width: 130px;
+    height: 40px;
+  }
+  .btn-text :hover{
+    border: 1px solid #e04f16;
+    background:transparent;
+    color:#e04f16;
+  }
+  /*services */
+  #services{ text-align: center;
+    padding-top: 70px;
+    background-color: #f9f9f9;
+  }
+ .services{  padding-top: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ gap: 70px;
+ overflow: hidden;
+ }
+  .Haulage{
+    width: 200px;
+    }
+    .transportation{ 
+     width: 200px;
+    }
+    .Warehouse{ 
+     width: 200px;
+    }
+    .Courier{ 
+     width: 200px;
+    }
+    /*review*/
+    #Reviews{ padding-top: 99px;
+      text-align: center;
+    }
+    .Reviews{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .Benita{ 
+      width: 350px;
+    }
+    .Audrey{
+      width: 350px;
+    }
+    .Segun{
+      width: 350px;
+    }
+    .assist{
+      text-align: center;
+    }
+    /*contact */
+    #contact{
+      background-color: #f9f9f9;
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mb-3{ width: 400px;
+  
+}
+.form-control{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn{ width: 400px;
+  background-color: #e04f16;
+  color: white;
+}
+.btn:hover { color: #e04f16;
+background: transparent;
+}
+.app-store{ gap: 20px;
+  display: flex;
+  padding-top: 30px;
+}
+.box{
+  padding-bottom: 50px;
+}
+.IOS{
+  Width: 150px;
+}
+.Google{
+  width: 150px;
+}
+a{ color: white;
+  text-decoration: none;
+}
+#download{ width: 600px;
+  padding-bottom: 50px;
+}
+/*footer*/
+.footer{ color: white;
+  background: #e04f16;
+}
+.white-haul{
+  width: 160px;
+  padding-bottom: 30px;
+} 
+#company{ 
+  color: white;
+}
+#support{
+  color: white;
+}
+#services2{
+  color: white;
+}
+.copy-right{
+  padding-top: 40px;
+}
+#social-media{
+  color: #ffffff;
+}}
+@media screen and (max-width: 1020px) {
+  .services{  padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:5px;
+    overflow: hidden;
+    }
+    .Haulage{min-width: 90px;
+      max-width:150px;
+      }
+      .transportation{ min-width: 90px;
+       max-width:150px;
+      }
+      .Warehouse{ 
+        min-width: 90px;
+        max-width:150px;
+      }
+      .Courier{ 
+        min-width: 90px;
+        max-width:150px;
+      }
+}
+  @media screen and (max-width: 700px) {
+    nav {
+      background: var(--clr-white);
+      box-shadow: var(--light-shadow);
+    }
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-toggle {
+      font-size: 1.5rem;
+      color: var(--clr-primary-5);
+      background: transparent;
+      border-color: transparent;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .nav-toggle:hover {
+      color: var(--clr-primary-1);
+      transform: rotate(90deg);
+    }
+   
+    .links li{
+      list-style: none;
+    }
+    .links a { text-decoration: none;
+      color: black;
+      font-size: 1rem;
+      text-transform: capitalize;
+      letter-spacing: var(--spacing);
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: var(--transition);
+    }
+    .links a:hover {
+     
+      color:#e04f16;
+      padding-left: 1.5rem;
+    }
+    
+    .links {
+      height: 0;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .show-links {
+      height: 20rem;
+    }
+    .sign-up{ border-color: #e04f16;
+      background: transparent;
+      border: 1px solid #e04f16;
+      width: 90px;
+      height: 32px;
+      color: #e04f16;
+     
+    }
+    .logo{
+      width:200px;
+    }
+
+   ul button .sign-up :hover{
+     color: black;
+    }
+    .text{
+      position: relative;
+      top: -40px;
+      font-weight: 700;
+    }
+    #text{
+      font-size: 18px;
+      padding-top: 20px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+      #illustration{
+      width: 60rem;
+      padding-bottom: 40px;
+      }
+    .btn-text{
+      padding-top: 30px;
+    }
+      .get-started{ border: none;
+        color: white;
+        background-color:#e04f16;
+        width: 130px;
+        height: 40px;
+      }
+      .btn-text :hover{
+        border: 1px solid #e04f16;
+        background:transparent;
+        color:#e04f16}
+        #services{ text-align: center;
+          padding-top: 70px;
+          background-color: #f9f9f9;
+        }
+    #Reviews{ padding-top: 99px;
+      text-align: center;
+    }
+    .Reviews{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .Benita{ 
+      width: 350px;
+    }
+    .Audrey{
+      width: 350px;
+    }
+    .Segun{
+      width: 350px;
+    }
+    .assist{
+      text-align: center;
+    }
+    #contact{
+      background-color: #f9f9f9;
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mb-3{ width: 300px;
+  
+}
+.form-control{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn{ width: 300px;
+  background-color: #e04f16;
+  color: white;
+}
+.btn:hover { color: #e04f16;
+background: transparent;
+}
+.app-store{ gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  padding-bottom: 50px;
+}
+.IOS{
+  Width: 200px;
+}
+.Google{
+  width: 200px;
+}
+a{ color: white;
+  text-decoration: none;
+}
+#download{ width: 600px;
+  padding-bottom: 50px;
+}
+/*footer*/
+.footer{ color: white;
+  background: #e04f16;
+}
+.white-haul{
+  width: 160px;
+  padding-bottom: 30px;
+} 
+#company{ 
+  color: white;
+}
+#support{
+  color: white;
+}
+#services2{
+  color: white;
+}
+.copy-right{
+  padding-top: 40px;
+}
+#social-media{
+  color: #ffffff;
+}
+  }
