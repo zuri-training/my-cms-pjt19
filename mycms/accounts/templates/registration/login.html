@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Sora', sans-serif;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    input {
+      height: 54px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #7839EE;
+    }
+
+    .btn {
+      width: 100%;
+      background-color: #7839EE;
+      border: 0;
+      height: 54px;
+    }
+
+    .btn:hover {
+      background-color: #7130DA;
+    }
+
+    .btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+  <title>Optimus CMS | Spin up websites without knowing how to code! | Login | Sign In!</title>
+</head>
+<body>
+
+  <div class="container my-3">
+    <header id="logo" class="mt-4">
+      <a href="/index"><img src="{% static './images/optimus/Frame 60200.png' %}" alt="optimus logo" width="150px"></a>
+    </header>
+
+    <main id="main">
+      <div class="d-flex" width="100%">
+        <div class="image d-flex" style="width:45%;">
+          <img src="{% static './images/optimus/amico.png' %}" alt="A man with a key" class="my-auto img-fluid" width="100%">
+        </div>
+
+        <div class="card border-0 p-5" style="width: 55%;">
+          <h2 class="text-center pb-5">Fill in to complete sign in</h2>
+          <form name="login" action="/home" method="get">
+            {% csrf_token%}
+            <div class="mb-2">
+              <label for="id_email" class='form-label'>Email</label>
+              <input type="email" name="email" maxlength="255" autofocus required id="id_email" class='form-control' placeholder="Enter your email">
+            </div>
+            <div class="mb-2">
+              <label for="id_password1" class='form-label'>Password</label>
+              <input type="password" name="password1" autocomplete="new-password" required id="id_password1" class='form-control' placeholder="input password" >
+            </div>
+            <button id="button" type="submit" class="btn btn-primary text-center my-4">Continue</button>
+            <p class="text-center my-4">New User? <a href="/sign-up">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+  {% comment %} <script src="{% static 'js/home.js' %}"></script> {% endcomment %}
+</body>
+</html>
