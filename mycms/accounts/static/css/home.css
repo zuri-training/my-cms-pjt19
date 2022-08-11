@@ -61,7 +61,7 @@ a {
 }
 
 #showcase {
-  background-image: url("{% static './images/optimus/Frame\ 59894.png' %}") no-repeat center center/cover;
+  background-image: url("https://www.flickr.com/photos/196229085@N05/52278662310/in/dateposted-public/") no-repeat center center/cover;
   height: 100vh;
   width: 100%;
   padding-top: 1rem;
