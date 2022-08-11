@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet: #491C96;
+    --white:#ffffff;
+}
+
+.sideMenu{
+    width: 272px;
+    position: fixed;
+    height: 100%;
+    background-color: var(--violet);
+    left: 0;
+    overflow-x: hidden;
+}
+
+
+.side-menu-nav{
+    margin-bottom: 3rem;
+}
+
+.top-header{
+    display: flex;
+    align-items: center;
+    column-gap: 4%;
+}
+
+a.side-menu-link{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.side-menu-link:hover{
+    color: var(--white);
+}
+
+.main-container{
+    margin-left: 272px;
+    padding-left: 3%;
+    padding-bottom: 5em;
+}
+
+.greeting{
+    font-size: 34.89px;
+    font-weight: 600;
+}
+
+.top-para{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.line{
+    color: var(--white);
+    font-weight: 800;
+    border:1px solid var(--white);
+}
+
+.logout{
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.down-menu-nav{
+    margin-bottom: 4em;
+}
+
+.templateContainers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 3%;
+    row-gap: 3em;
+}
+
+.templateContainers h3{
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+.template-text{
+    display: flex;
+    align-items: center;
+    column-gap: 4em;
+}
+
+.view{
+    color: var(--violet);
+}
+
+.icon{
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.side-links{
+    display: inline-flex;
+    column-gap:0.7em;
+}
