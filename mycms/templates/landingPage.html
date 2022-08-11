@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./dashboard.css">
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/css/dashboard.css'%}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+   
     <div class="sideMenu">
 
         <div class="toggle-btn">
@@ -18,38 +23,38 @@
         </div>
     
         <div class="top-header m-4">
-            <div class="first-logo"><img src="./assets/Group 59933.png" alt=""></div>
-            <div class="second-logo"><img src="./assets/Group 59932.png" alt=""></div>
+            <div><img src="{% static "\static\Images\optimus\Group 59933.png" }" alt=""></div>
+            <div><img src="{% static "\static\Images\optimus\Group 59932.png" %}" alt=""></div>
         </div>
 
         <div class="side-menu-nav">
             
             <div class="mb-3 side-links" >
                
-                <a href="./allTemplates.html" class="side-menu-link">
-                    <span><img src="./assets/note.png" alt="" class="icon"></span>
+                <a href="/allTemplates" class="side-menu-link">
+                    <span><img src="{%  static "\static\Images\optimus\note.png" %}" alt="" class="icon"></span>
                     <span class="link-text">All Templates</span>
                 </a>
             </div>
             <div class="mb-3 side-links">
                
-                <a href="./portfolio.html" class="side-menu-link">
-                    <span><img src="./assets/Group 59834.png" class="icon" alt=""></span>
+                <a href="/portfolio" class="side-menu-link">
+                    <span><img src="{ % static "\static\Images\optimus\Group 59834.png" % }" class="icon" alt=""></span>
                     <span class="link-text"> Portfolio</span>
                 </a>
                 
             </div>
             <div class="mb-3 side-links">
                
-                <a href="./landingPage.html" class="side-menu-link"> 
-                    <span><img src="./assets/Group 59847.png" class="icon" alt=""></span>
+                <a href="/landingPage" class="side-menu-link"> 
+                    <span><img src="{% static "\static\Images\optimus\Group 59847.png" % }" class="icon" alt=""></span>
                     <span class="link-text">Landing Page</span>
                 </a>
             </div>
             <div class="mb-3 side-links">
                
-                <a href="./blog.html" class="side-menu-link">
-                    <span><img src="./assets/data.png" class="icon" alt=""></span>
+                <a href="/blog" class="side-menu-link">
+                    <span><img src="{% static "\static\Images\optimus\data.png" %}" class="icon" alt=""></span>
                     <span class="link-text"> Blog</span>
                 </a>
             </div>
@@ -58,16 +63,18 @@
 
         <div class="down-menu-nav">
             <div class="mb-3 side-links" >
-                <a href="#" class="side-menu-link">
-                    <span><img src="./assets/Group 59838.png" class="icon" alt=""></span>
+                <a href="/support" class="side-menu-link">
+                    <span><img src="{% static "\static\Images\optimus\Group 59838.png" % }" class="icon" alt=""></span>
                     <span class="link-text">Support</span>
                 </a>
             </div>
         </div>
 
         <div class="logout side-links ">
-            <span><img src="./assets/Group 59846.png" class="icon" alt=""></span>
-            <span class="link-text">Logout</span>
+            <a href="/login">
+                <span><img src="{ & static "\static\Images\optimus\Group 59846.png" & }" class="icon" alt=""></span>
+                <span class="link-text">Logout</span>
+            </a>
         </div>
         <hr class="line">
 
@@ -82,8 +89,8 @@
 
       <div class="templateContainers">
         <div class="template">
-            <img src="./assets/Frame 59936 1.png" class="temp-image" alt="">
-            
+            <div><img src="{% static "\static\Images\optimus\Frame 59936 1.png" }" alt=""></div>
+            <img src="./assets/" class="temp-image" alt="">      
             <div class="template-text">
                 <h3>Photography</h3>
                 <h3 class="view">View Template</h3>
@@ -92,7 +99,7 @@
         </div>
 
         <div class="template">
-            <img src="./assets/Photography landing page 1.png" class="temp-image" alt="">
+            <img src="{ & static "\static\Images\optimus\Photography landing page 1.png" & }" class="temp-image" alt="">
             <div  class="template-text">
                 <h3>Logistics</h3>
                 <h3 class="view">View Template</h3>
@@ -101,7 +108,7 @@
         </div>
 
         <div class="template">
-            <img src="./assets/Logistics1 1.png" class="temp-image" alt="">
+            <img src="{ & static "\static\Images\optimus\Logistics1 1.png" & }" class="temp-image" alt="">
             <div  class="template-text">
                 <h3>Logistics</h3>
                 <h3 class="view">View Template</h3>
@@ -110,7 +117,7 @@
         </div>
 
         <div class="template">
-            <img src="./assets/FOOD LANDING PAGE1 1 (1).png" class="temp-image" alt="">
+            <img src="{ & static "\static\Images\optimus\FOOD LANDING PAGE1 1 (1).png" & }" class="temp-image" alt="">
             <div  class="template-text">
                 <h3>Food</h3>
                 <h3 class="view">View Template</h3>
@@ -119,7 +126,7 @@
         </div>
 
         <div class="template">
-            <img src="./assets/Food (Beverages)2 1.png" class="temp-image" alt="">
+            <img src="{ & static "\static\Images\optimus\Food (Beverages)2 1.png" & }" class="temp-image" alt="">
             <div  class="template-text">
                 <h3>Food</h3>
                 <h3 class="view">View Template</h3>
@@ -128,7 +135,7 @@
         </div>
 
         <div class="template">
-            <img src="./assets/Fashion landing page1 1.png" class="temp-image" alt="">
+            <img src="{ & static "\static\Images\optimus\Fashion landing page1 1.png" & }" class="temp-image" alt="">
             <div  class="template-text">
                 <h3>Fashion</h3>
                 <h3 class="view">View Template</h3>
@@ -143,6 +150,6 @@
    
 
     </main>
-    <script src="./dashboard.js"></script>
+    <script src="{ % static "\static\js\script.js" % }"></script>
 </body>
 </html>
