@@ -65,22 +65,21 @@
           </div>
         </div>
 
-        <div class="col-12 col-lg-6">
-          <div class="card border-0 p-3">
-            <h2 class="text-center pb-5">Fill in to complete sign in</h2>
-            <form name="login" action="/allTemplates">
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="johndoe@gmail.com" onkeyup="enableSubmit()">
-              </div>
-              <div class="mb-5">
-                <label for="password" class="form-label">Password</label>
-                <input id="pass" type="password" class="form-control" id="password" placeholder="**********" onkeyup="enableSubmit()">
-              </div>
-              <button id="button" type="submit" class="btn btn-primary text-center my-4">Continue</button>
-              <p class="text-center my-4">New User? <a href="/signup">Create an account</a></p>
-            </form>
-          </div>
+        <div class="card border-0 p-5" style="width: 55%;">
+          <h2 class="text-center pb-5">Fill in to complete sign in</h2>
+          <form name="login" method="post" autocomplete="false ">
+            {% csrf_token%}
+            <div class="mb-2">
+              <label for="id_username" class="form-label">Email</label>
+              <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="255" class="form-control" required id="id_username">
+            </div>
+            <div class="mb-2">
+              <label for="id_password" class="form-label">Password</label>
+              <input type="password" class='form-control' name="password" autocomplete="current-password" class="form-control" required id="id_password">
+            </div>
+            <button id="button" type="submit" class="btn btn-primary text-center my-4">Continue</button>
+            <p class="text-center my-4">New User? <a href="/sign-up">Create an account</a></p>
+          </form>
         </div>
 
        </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
 
 html,
 body,
@@ -357,16 +357,12 @@ a {
 .box-md:hover {
   transform: translateY(-2%);
   transition: 1s linear;
-}
-
-.box-md {
-  /* width: 15em; */
-  object-fit: cover;
-}
-
+  }
+  
 .box-md > img {
   width: 100%;
 }
+
 #quarterly .btn-primary {
   margin-bottom: 57px;
 }
@@ -588,4 +584,3 @@ a {
   #templates .gridview .box-txt h5 {
     font-size: 10px;
   }
-}
