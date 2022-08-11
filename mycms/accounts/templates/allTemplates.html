@@ -13,54 +13,60 @@
 <body>
 
     <div class="sideMenu">
+      <a href="/home">
         <div class="top-header m-4">
-            <div><img src="{% static '/images/assets/Group 59933.png'%}" alt=""></div>
-            <div><img src="{% static '/images/assets/Group 59932.png'%}" alt=""></div>
+          <div><img src="{% static '/images/assets/Group 59933.png'%}" alt=""></div>
+          <div><img src="{% static '/images/assets/Group 59932.png'%}" alt=""></div>
         </div>
+      </a>
 
-        <div class="side-menu-nav p-5">
-            <div class="mb-3 side-links" >
-                <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
-                <a href="./allTemplates.html" class="side-menu-link">All Templates</a>
-            </div>
-            <div class="mb-3 side-links">
-                <span><img src="{%  static 'images/assets/Group 59834.png'%}" class="icon" alt=""></span>
-                <a href="./portfolio.html" class="side-menu-link">Portfolio</a>
-                
-            </div>
-            <div class="mb-3 side-links">
-                <span><img src="{%  static 'images/assets/Group 59847.png'%}" class="icon" alt=""></span>
-                <a href="./landingPage.html" class="side-menu-link"> Landing Page</a>
-            </div>
-            <div class="mb-3 side-links">
-                <span><img src="{%  static 'images/assets/data.png'%}" class="icon" alt=""></span>
-                <a href="./blog.html" class="side-menu-link">Blog</a>
-            </div>
-        </div>
-        <hr class="line">
+      <div class="side-menu-nav p-5">
+          <div class="mb-3 side-links" >
+            <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
+            <a href="./home" class="side-menu-link">All Templates</a>
+          </div>
+          <div class="mb-3 side-links">
+            <span><img src="{%  static 'images/assets/Group 59834.png'%}" class="icon" alt=""></span>
+            <a href="./portfolio.html" class="side-menu-link">Portfolio</a>
+              
+          </div>
+          <div class="mb-3 side-links">
+            <span><img src="{%  static 'images/assets/Group 59847.png'%}" class="icon" alt=""></span>
+            <a href="./landingPage.html" class="side-menu-link"> Landing Page</a>
+          </div>
+          <div class="mb-3 side-links">
+            <span><img src="{%  static 'images/assets/data.png'%}" class="icon" alt=""></span>
+            <a href="./blog.html" class="side-menu-link">Blog</a>
+          </div>
+      </div>
+      <hr class="line">
 
-        <div class="down-menu-nav px-5">
-            <div class="mb-3">
-                <a href="#" class="side-menu-link">Invite Teammates</a>
-            </div>
-            <div class="mb-3 side-links" >
-                <span><img src="{%  static 'images/assets/Group 59838.png'%}" class="icon" alt=""></span>
-                <a href="#" class="side-menu-link">Support</a>
-            </div>
-        </div>
+      <div class="down-menu-nav px-5">
+          <div class="mb-3 side-links">
+            <span><img src="{%  static 'images/assets/Group 59838.png'%}" class="icon" alt=""></span>
+            <a href="#" class="side-menu-link">Support</a>
+          </div>
+      </div>
 
-        <div class="logout px-5 side-links ">
-            <span><img src="{%  static 'images/assets/Group 59846.png'%}" class="icon" alt=""></span>
-            <span>Logout</span>
-        </div>
-        <hr class="line">
+      <div class="logout px-5 side-links ">
+        <span><img src="{%  static 'images/assets/Group 59846.png'%}" class="icon" alt=""></span>
+        <span>Logout</span>
+      </div>
+      
+      <hr class="line">
 
     </div>
 
     <main class="main-container">
+        {% if user.is_authenticated %}
         <div class="greeting mb-3 text-center pt-5">
-            <h1 class="">Good Afternoon Edidiong</h1>
+            <h1 class="">Good Afternoon {{ user.name}}</h1>
         </div>
+        {% else %}
+        <div class="greeting mb-3 text-center pt-5">
+            <h1 class="">Good Afternoon</h1>
+        </div>
+        {%  endif %}
 
         <p class="text-center top-para">Create Something Magical today from Our Templates </p>
 
