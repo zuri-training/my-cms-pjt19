@@ -1,0 +1,158 @@
+.logo{
+    width:120px;
+  
+  }
+  .nav-center {
+    overflow: hidden;
+    background-color: white;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; 
+    height: auto;
+    z-index: 2;
+    overflow: hidden;
+    }
+    .nav{
+      display: flex;
+      color: #f2f2f2;
+      text-align: center;
+      justify-content: space-between;
+      padding: 12px 36px;
+      text-decoration: none;
+      overflow: hidden;
+    }
+    .Edit{overflow:hidden;
+       position: relative;
+        top:-9px;
+        width:153px;
+        font-size: 15px;
+        font-weight: 300;
+        height:35px;
+        border: none;
+        color: white;
+        background-color: #5720B7;
+    }
+    .grids { font-size: 20px;
+        padding: 0;
+        color: white;
+      }
+      .head{
+        background-color: #0040C1;
+      }
+      .nav-links { 
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 70px;
+      }
+      .links {
+        height: auto;
+        display: flex;
+      }
+      .links li{
+        list-style: none;
+      }
+      .links a { text-decoration: none;
+        color: white;
+        font-size: 20px;
+        text-transform: capitalize;
+        letter-spacing: var(--spacing);
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: var(--transition);
+      }
+      .links a:hover {
+     
+        color:#ffff;
+        padding-left: 1.5rem;
+      }
+   .image{
+    background: url(./images/Rectangle\ 139.png);
+    background-size: cover;
+    padding-top: 500px;
+   }
+   .img-2{
+    width:70px;
+   }
+   .user{ gap: 20px;
+    display:flex;
+   }
+  span{
+    font-size: 20px;
+font-weight: 600;
+}
+.bi-heart{
+font-size: 30px;
+padding-top: 20px;
+
+}
+.bi-heart:hover{
+    color: red;
+}
+
+.blog{
+    display:flex;
+    padding-top: 50px;
+    justify-content: space-around;
+}
+.body h4{
+    text-align:center;
+}
+.perfect{ padding-top: 40px;
+    width:400px;
+    height:200px;
+}
+.middle{ justify-content: space-between;
+   display:flex;
+   
+}
+.container h3{
+  text-align: center;
+}
+.social{ display:flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+}
+
+.forth .container{ display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:150px;
+background-color: rgb(236, 236, 251);
+}
+.fifth{ padding-top: 50px;
+}
+#input{ 
+  width: 500px;
+
+}
+.read{ border:none;
+  width:200px;
+  background-color:rgb(184, 175, 184);
+height: 40px;
+
+}
+.sixth{ padding-top: 30px;
+  padding-bottom:60px;
+}
+.email{
+  padding-bottom: 20px;;
+}
+.btns{
+  padding-bottom: 20px;
+
+}
+#news{
+  background-color: #5720B7;
+border: none;
+color:white;
+}
+.footer-clean{ background-color: rgb(184, 175, 184);
+ overflow:hidden;
+  padding-top: 50px;
+}
