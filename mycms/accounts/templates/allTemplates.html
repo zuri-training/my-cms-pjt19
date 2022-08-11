@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    {%load static%}
+
+    {% load static %}
+
     <link rel="stylesheet" href="{% static '/css/dashboard.css'%}">
-    <link rel="stylesheet" href="{% static '/css/bootstrap-5.0.2-dist/css/bootstrap.min.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+   
+
     <div class="sideMenu">
+
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
         <div class="top-header m-4">
-            <div><img src="{% static '/images/assets/Group 59933.png'%}" alt=""></div>
-            <div><img src="{% static '/images/assets/Group 59932.png'%}" alt=""></div>
+            <div><img src="{% static "\static\Images\optimus\Group 59933.png" }" alt=""></div>
+            <div><img src="{% static "\static\Images\optimus\Group 59932.png" %}" alt=""></div>
         </div>
 
-        <div class="side-menu-nav p-5">
+        <div class="side-menu-nav">
+            
             <div class="mb-3 side-links" >
-                <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
-                <a href="./allTemplates.html" class="side-menu-link">All Templates</a>
+               
+                <a href="/allTemplates" class="side-menu-link">
+                    <span><img src="{%  static "\static\Images\optimus\note.png" %}" alt="" class="icon"></span>
+                    <span class="link-text">All Templates</span>
+                </a>
             </div>
             <div class="mb-3 side-links">
-                <span><img src="{%  static 'images/assets/Group 59834.png'%}" class="icon" alt=""></span>
-                <a href="./portfolio.html" class="side-menu-link">Portfolio</a>
+               
+                <a href="/portfolio" class="side-menu-link">
+                    <span><img src="{ % static "\static\Images\optimus\Group 59834.png" % }" class="icon" alt=""></span>
+                    <span class="link-text"> Portfolio</span>
+                </a>
                 
             </div>
             <div class="mb-3 side-links">
-                <span><img src="{%  static 'images/assets/Group 59847.png'%}" class="icon" alt=""></span>
-                <a href="./landingPage.html" class="side-menu-link"> Landing Page</a>
+               
+                <a href="/landingPage" class="side-menu-link"> 
+                    <span><img src="{% static "\static\Images\optimus\Group 59847.png" % }" class="icon" alt=""></span>
+                    <span class="link-text">Landing Page</span>
+                </a>
             </div>
             <div class="mb-3 side-links">
-                <span><img src="{%  static 'images/assets/data.png'%}" class="icon" alt=""></span>
-                <a href="./blog.html" class="side-menu-link">Blog</a>
+               
+                <a href="/blog" class="side-menu-link">
+                    <span><img src="{% static "\static\Images\optimus\data.png" %}" class="icon" alt=""></span>
+                    <span class="link-text"> Blog</span>
+                </a>
             </div>
         </div>
         <hr class="line">
 
-        <div class="down-menu-nav px-5">
-            <div class="mb-3">
-                <a href="#" class="side-menu-link">Invite Teammates</a>
-            </div>
+        <div class="down-menu-nav">
             <div class="mb-3 side-links" >
-                <span><img src="{%  static 'images/assets/Group 59838.png'%}" class="icon" alt=""></span>
-                <a href="#" class="side-menu-link">Support</a>
+                <a href="/support" class="side-menu-link">
+                    <span><img src="{% static "\static\Images\optimus\Group 59838.png" % }" class="icon" alt=""></span>
+                    <span class="link-text">Support</span>
+                </a>
             </div>
         </div>
 
-        <div class="logout px-5 side-links ">
-            <span><img src="{%  static 'images/assets/Group 59846.png'%}" class="icon" alt=""></span>
-            <span>Logout</span>
+        <div class="logout side-links ">
+            <span><img src="{ % static "\static\Images\optimus\Group 59846.png" % }" class="icon" alt=""></span>
+            <span class="link-text">Logout</span>
         </div>
         <hr class="line">
 
@@ -65,107 +86,121 @@
         <p class="text-center top-para">Create Something Magical today from Our Templates </p>
 
         <div class="templateContainers">
-            <div>
-                <img src="{%  static 'images/assets/Frame 59936 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Food1 1.png" %}" class="temp-image" alt="">
+                <img src="./assets/Frame 59936 1.png" class="temp-image" alt="">
                 
                 <div class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Logistics1 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Logistics1 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Logistics</h3>
+                    <h3>Logistics</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Food (Beverages)2 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Food (Beverages)2 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Food</h3>
+                    <h3>Food</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Fashion landing page1 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Fashion landing page1 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Fashion</h3>
+                    <h3>Fashion</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/photography porfolio.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\photography porfolio.png" %}" class="temp-image" alt="">
                 <div  class="template-text" >
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Design1 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Design1 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/FOOD LANDING PAGE1 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\FOOD LANDING PAGE1 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Food</h3>
+                    <h3>Food</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
             
-            <div>
-                <img src="{%  static 'images/assets/Frame 60687 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Frame 60687 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Design port 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Design port 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4 ">Design</h3>
+                    <h3>Design</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
                    
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/blog 3 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\blog 3 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Design1 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Design1 1.png" %}" class="temp-image" alt="">
+              
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="{%  static 'images/assets/Food1 1.png'%}" alt="">
+            <div class="template">
+                <img src="{% static "\static\Images\optimus\Food1 1.png" %}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Food</h3>
+                    <h3>Food</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
         </div>
 
     </main>
-    
+    <script src="{ % static "\static\js\script.js" % }"></script>
 </body>
 </html>
