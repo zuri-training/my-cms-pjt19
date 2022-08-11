@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/css/dashboard.css'%}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="sideMenu">
+
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
+        <div class="top-header m-4">
+            <div><img src="{% static "\static\Images\optimus\Group 59933.png" }" alt=""></div>
+            <div><img src="{% static "\static\Images\optimus\Group 59932.png" %}" alt=""></div>
+        </div>
+
+        <div class="side-menu-nav">
+            
+            <div class="mb-3 side-links" >
+               
+                <a href="/allTemplates" class="side-menu-link">
+                    <span><img src="{%  static "\static\Images\optimus\note.png" %}" alt="" class="icon"></span>
+                    <span class="link-text">All Templates</span>
+                </a>
+            </div>
+            <div class="mb-3 side-links">
+               
+                <a href="/portfolio" class="side-menu-link">
+                    <span><img src="{ % static "\static\Images\optimus\Group 59834.png" % }" class="icon" alt=""></span>
+                    <span class="link-text"> Portfolio</span>
+                </a>
+                
+            </div>
+            <div class="mb-3 side-links">
+               
+                <a href="/landingPage" class="side-menu-link"> 
+                    <span><img src="{% static "\static\Images\optimus\Group 59847.png" % }" class="icon" alt=""></span>
+                    <span class="link-text">Landing Page</span>
+                </a>
+            </div>
+            <div class="mb-3 side-links">
+               
+                <a href="/blog" class="side-menu-link">
+                    <span><img src="{% static "\static\Images\optimus\data.png" %}" class="icon" alt=""></span>
+                    <span class="link-text"> Blog</span>
+                </a>
+            </div>
+        </div>
+        <hr class="line">
+
+        <div class="down-menu-nav">
+            <div class="mb-3 side-links" >
+                <a href="/support" class="side-menu-link">
+                    <span><img src="{% static "\static\Images\optimus\Group 59838.png" % }" class="icon" alt=""></span>
+                    <span class="link-text">Support</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="logout side-links ">
+            <a href="/login">
+                <span><img src="{ & static "\static\Images\optimus\Group 59846.png" & }" class="icon" alt=""></span>
+                <span class="link-text">Logout</span>
+            </a>
+        </div>
+        <hr class="line">
+
+    </div>
+
+    <main class="main-container">
+        <div class="greeting mb-3 text-center pt-5">
+            <h1 class="">Good Afternoon Edidiong</h1>
+        </div>
+
+        <p class="text-center top-para">Create Something Magical today from Our Templates </p>
+
+     <div class="templateContainers">
+        <div class="template"> 
+            <img src="{& static "\static\Images\optimus\blog 3 1.png" &}" class="temp-image" alt="">
+            <div  class="template-text">
+                <h3>Photography</h3>
+                <h3 class="view">View Template</h3>
+                <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
+            </div>
+        </div>
+
+        <div class="template">
+            <img src="{ & static "\static\Images\optimus\Food1 1.png" & }" class="temp-image" alt="">
+            <div  class="template-text">
+                <h3>Food</h3>
+                <h3 class="view">View Template</h3>
+                <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
+            </div>
+        </div>
+
+        <div class="template">
+            <img src="{& static "\static\Images\optimus\Design1 1.png" & }" class="temp-image" alt="">
+            <div  class="template-text">
+                <h3>Photography</h3>
+                <h3 class="view">View Template</h3>
+                <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
+            </div>
+        </div>
+     </div>
+
+    
+    </main>
+    
+    <script src="{ % static "\static\js\script.js" % }"></script>
+</body>
+</html>

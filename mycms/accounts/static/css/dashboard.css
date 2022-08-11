@@ -145,6 +145,15 @@ a.side-menu-link {
   transition: 1s ease-in-out;
 }
 
+.logout a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logout a:hover{
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .toggle-btn {
     display: block;
@@ -223,7 +232,6 @@ a.side-menu-link {
     margin-top: 0.8em;
     cursor: pointer;
   }
-
   .template-text {
     column-gap: 2em;
   }
