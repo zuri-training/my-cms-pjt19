@@ -54,12 +54,16 @@
     </header>
 
     <main id="main">
-      <div class="d-flex" width="100%">
-        <div class="image d-flex" style="width:45%;">
+      <div class="container" width=""100%>
+
+       <div class="row">
+
+        <div class="col-12 col-lg-6">
           <img src="{% static './images/optimus/amico.png' %}" alt="A man with a key" class="my-auto img-fluid" width="100%">
         </div>
 
-        <div class="card border-0 p-5" style="width: 55%;">
+       <div class="col-12 col-lg-6">
+        <div class="card border-0 p-3">
           <h2 class="text-center pb-5">Fill in to complete sign in</h2>
           <form name="login" method="post" autocomplete="false ">
             {% csrf_token%}
@@ -75,6 +79,10 @@
             <p class="text-center my-4">New User? <a href="/sign-up">Create an account</a></p>
           </form>
         </div>
+       </div>
+
+       </div>
+
       </div>
     </main>
   </div>
