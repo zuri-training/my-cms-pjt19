@@ -29,3 +29,15 @@ def home(request):
 
 def portfolio(request):
   return render(request, 'portfolio.html')
+
+def landingpages(request):
+  return render(request, 'landingPage.html')
+
+def blogs(request):
+  return render(request, 'blog.html')
+
+def about(request):
+  return render(request, 'about.html')
+
+def support(request):
+  return render(request, 'support.html')
