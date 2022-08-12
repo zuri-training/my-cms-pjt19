@@ -130,7 +130,6 @@ a {
 }
 
 #showcase {
-  background: url("./optimus/Frame\ 59894.png") no-repeat center center/cover;
   min-height: 100vh;
   width: 100%;
   padding-top: 1rem;
@@ -584,3 +583,4 @@ a {
   #templates .gridview .box-txt h5 {
     font-size: 10px;
   }
+}

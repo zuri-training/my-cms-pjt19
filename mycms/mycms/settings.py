@@ -15,9 +15,12 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-# os.path.join(BASE_DIR, 'bootstrap-5.0.2-dist'),
+TEMPLATES_DIR = (
+    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(SETTINGS_PATH, 'templates'),
+)
 
 
 # Quick-start development settings - unsuitable for production
@@ -65,7 +68,10 @@ ROOT_URLCONF = 'mycms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/"templates"],
+        'DIRS': [
+            os.path.join(BASE_DIR,"templates"),
+            os.path.join(SETTINGS_PATH, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,4 +151,4 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 LOGIN_REDIRECT_URL = '/home'
-LOGOUT_REDIRECT_URL = '/index'
+LOGOUT_REDIRECT_URL = '/login'

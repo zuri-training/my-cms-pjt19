@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimus | Support</title>
-
     {% load static %}
-
-    <link rel="stylesheet" href="{% static '/css/support.css'%}">
+    <link rel="stylesheet" href="{% static '/css/support.css' %}">
     <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -17,7 +15,7 @@
     <div class="container">
         <nav class="navbar">
           <div class="logo">
-            <a href="/index"><img src="{% static "\static\Images\optimus\Frame 60200.png" %}" alt="optimus logo" width="155px"></a>
+            <a href="/index"><img src="{% static '\images\optimus\Frame 60200.png' %}" alt="optimus logo" width="155px"></a>
           </div>
     
           <div class="links">
@@ -36,12 +34,11 @@
       </div>
 
     <section class="hero-section">
-        <h1 class="hero-header1" data-aos="zoom-in-down">
-            At Optimus, our mission is to enable users express 
-            themselves and establish an online presence.
-        </h1>
-
-        <h3 class="hero-header2" data-aos="zoom-in-up">We are here to serve you better.</h3>
+      <h1 class="hero-header1" data-aos="zoom-in-down">
+        At Optimus, our mission is to enable users express 
+        themselves and establish an online presence.
+      </h1>
+      <h3 class="hero-header2" data-aos="zoom-in-up">We are here to serve you better.</h3>
     </section>
 
     <section class="section-1">
@@ -59,7 +56,7 @@
             <div class="question" data-aos="fade-down">
                 <div class="question-header">
                     <h3>Is Optimus free?</h3>
-                    <div><img src="{% static "\static\Images\optimus\No Credit Cards.png %}" alt="Credit cad"></div>
+                    <div><img src="{% static "\images\optimus\No Credit Cards.png" %}" alt="Credit cad"></div>
                 </div>
 
                 <p>
@@ -71,7 +68,7 @@
             <div class="question" data-aos="fade-up">
                 <div class="question-header">
                     <h3>I can’t create an account</h3>
-                    <div><img src="{ %static "\static\Images\optimus\Account.png" % }" alt="Credit cad"></div>
+                    <div><img src="{%static "\images\optimus\Account.png" %}" alt="Credit cad"></div>
                 </div>
 
                 <p>
@@ -83,7 +80,7 @@
             <div class="question" data-aos="fade-down">
                 <div class="question-header">
                     <h3>How many websites can I create with my account?</h3>
-                    <div><img src="{% static "\static\Images\optimus\Whois.png" %}" alt="Credit cad"></div>
+                    <div><img src="{% static "\images\optimus\Whois.png" %}" alt="Credit cad"></div>
                 </div>
 
                 <p>
@@ -95,7 +92,7 @@
             <div class="question" data-aos="fade-up">
                 <div class="question-header">
                     <h3>What are the benefits of using Optimus?</h3>
-                    <div><img src="{% static "\static\Images\optimus\Increase.png" %}" alt="Credit cad"></div>
+                    <div><img src="{% static "\images\optimus\Increase.png" %}" alt="Credit cad"></div>
                 </div>
 
                 <p>
@@ -129,7 +126,7 @@
            </div>
 
            <div class="contact-img" data-aos="zoom-in-up">
-               <img src="{ %static "\static\Images\optimus\Frame 60728.png" % }" alt="">
+               <img src="{%static "\images\optimus\Frame 60728.png" %}" alt="">
            </div>
         </div>
 
@@ -185,6 +182,6 @@
       AOS.init();
     </script>
 
-   <script src="{ % static "\static\js\script.js" % }"></script>
+   <script src="{% static "\js\script.js" %}"></script>
 </body>
 </html>

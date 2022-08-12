@@ -13,6 +13,12 @@
   <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <style>
+    #showcase {
+      background: url("{% static '/images/optimus/Frame 59894.png' %}") no-repeat center center/cover;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -27,10 +33,10 @@
   
         <div class="links">
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/support">Support</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'support'%}">Support</a></li>
             <li><a class="link-btn" href="/login">Login</a></li>
-            <li><a class="link-btn btn-primary" href="/signup">Register</a></li>
+            <li><a class="link-btn btn-primary" href="/sign-up">Register</a></li>
           </ul>
         </div>
 
@@ -44,7 +50,7 @@
       <h1 data-aos="fade-down-right">The countless versatile templates</h1>
       <p data-aos="fade-down-left">Optimus is a content management system that allows you create landing pages and other effective digital tools.</p>
      
-      <a href="/signup">
+      <a href="/sign-up">
         <button class="btn-primary" data-aos="flip-left">Get Started</button>
       </a>
     </div>
@@ -59,7 +65,7 @@
         <img src="{% static './images/optimus/photography porfolio.png' %}" alt="photography portfolio">
         <div class="box-txt">
           <h5>Portfolio</h5>
-          <a href="#">view templates</a>
+          <a href="{% url 'signup'%}">view templates</a>
         </div>
       </div>
 
@@ -67,7 +73,7 @@
         <img src="{% static "\images\optimus\Logistics 1.png" %}" alt="landing">
         <div class="box-txt">
           <h5>Landing Page</h5>
-          <a href="#">view templates</a>
+          <a href="{% url 'signup'%}">view templates</a>
         </div>
       </div>
 
@@ -75,7 +81,7 @@
         <img src="{% static "\images\optimus\Photography.png" %}" alt="blog">
         <div class="box-txt">
           <h5>Blog</h5>
-          <a href="#">view templates</a>
+          <a href="{% url 'signup'%}">view templates</a>
         </div>
       </div>
 
@@ -133,7 +139,7 @@
       </div>
     </div>
 
-    <a href="/signup">
+    <a href="/sign-up">
       <button class="btn-primary" data-aos="zoom-in-down">Get Started</button>
     </a>
   </section>
@@ -156,9 +162,9 @@
       <div class="templates">
         <h3>Templates</h3>
         <ul>
-          <li><a href="/landingPage">Landing page</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><a href="/home/landingpages">Landing page</a></li>
+          <li><a href="/home/portfolio">Portfolio</a></li>
+          <li><a href="/home/blogs">Blog</a></li>
         </ul>
       </div>
   
@@ -166,7 +172,7 @@
         <h3>Career</h3>
         <ul>
           <li><a href="#">Career</a></li>
-          <li><a href="#">Contact support</a></li>
+          <li><a href="/home/support">Contact support</a></li>
           <li><a href="#">FAQ</a></li>
         </ul>
       </div>
