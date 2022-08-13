@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from .forms import RegisterForm
+from .models import User
+from builder.models import UserTemplate
 
 from django.views.decorators.csrf import csrf_protect 
 
@@ -26,6 +28,12 @@ def signup(request):
 
   return(render(request, 'registration/signup.html', {"form": form}))
 
-# @login_required
+  #@login_required
 def home(request):
-  return render(request, 'allTemplates.html')
+    #user = User.objects.get(name=request.user)
+    usertemplates = UserTemplate.objects.all().filter(created_by=request.user)
+    return render(request, 'user_templates.html', {"usertemplates":usertemplates})
+
+def logout_user(request):
+    logout(request)
+    return redirect('index')
