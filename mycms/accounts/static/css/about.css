@@ -183,10 +183,6 @@ html {
 }
 
 .about-hero {
-  background-image: url("./assets/Frame\ 60387\ \(1\).png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 450px;
 }
 

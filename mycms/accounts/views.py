@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout
 from .forms import RegisterForm
+from django.contrib.auth.decorators import login_required
 
 from django.views.decorators.csrf import csrf_protect 
 
@@ -23,16 +24,23 @@ def signup(request):
 
   return(render(request, 'registration/signup.html', {"form": form}))
 
-# @login_required
+def logout_view(request):
+    logout(request, 'login.html')
+
+@login_required(login_url='/login/')
+
 def home(request):
   return render(request, 'allTemplates.html')
 
+@login_required(login_url='/login/')
 def portfolio(request):
   return render(request, 'portfolio.html')
 
+@login_required(login_url='/login/')
 def landingpages(request):
   return render(request, 'landingPage.html')
 
+@login_required(login_url='/login/')
 def blogs(request):
   return render(request, 'blog.html')
 

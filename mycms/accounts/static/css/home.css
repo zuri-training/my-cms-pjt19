@@ -419,7 +419,7 @@ a {
   row-gap: 2em;
   justify-items: center;
   margin-bottom: 1.5em;
-  text-align: center;
+  text-align: left;
 }
 
 #footer-main h3 {
@@ -443,7 +443,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 #footer-main .container .footer-details a {
@@ -574,6 +573,7 @@ a {
 
   .footer-wrapper {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
   #templates .gridview .box-txt a {

@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="{% static '/css/support.css' %}">
     <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      .hero-section {
+        background: url("{% static '/images/optimus/banner.PNG' %}") no-repeat center center/cover;
+      }
+    </style>
 </head>
 <body>
 
@@ -23,7 +28,7 @@
               <li><a href="/about">About</a></li>
               <li><a href="./support">Support</a></li>
               <li><a class="link-btn" href="/login">Login</a></li>
-              <li><a class="link-btn btn-primary" href="/signup">Register</a></li>
+              <li><a class="link-btn btn-primary" href="/sign-up">Register</a></li>
             </ul>
           </div>
   
@@ -41,7 +46,7 @@
       <h3 class="hero-header2" data-aos="zoom-in-up">We are here to serve you better.</h3>
     </section>
 
-    <section class="section-1">
+    <section class="section-1" id"FAQs">
         <h2 class="freq-header" data-aos="zoom-out-down"> Frequently asked questions</h2>
 
         <p class="freq-para" data-aos="zoom-out-in">
@@ -138,9 +143,9 @@
           <div class="templates">
             <h3>Templates</h3>
             <ul>
-              <li><a href="/landingPage">Landing page</a></li>
-              <li><a href="/portfolio">Portfolio</a></li>
-              <li><a href="/blog">Blog</a></li>
+              <li><a href="/home/landingpages">Landing page</a></li>
+              <li><a href="/home/portfolio">Portfolio</a></li>
+              <li><a href="/home/blogs">Blog</a></li>
             </ul>
           </div>
       
@@ -148,8 +153,8 @@
             <h3>Career</h3>
             <ul>
               <li><a href="#">Career</a></li>
-              <li><a href="#">Contact support</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a href="/home/support">Contact support</a></li>
+              <li><a href="#FAQs">FAQ</a></li>
             </ul>
           </div>
       
@@ -164,8 +169,8 @@
           </div>
       
          </div>
-          <div class="footer-details">
-             <div class="mb-3">
+          <div class="footer-details pt-5">
+             <div>
               <span class="terms"><a href="">Terms and conditions</a></span>
               <span class="privacy"><a href="">Privacy policy</a></span>
              </div>
