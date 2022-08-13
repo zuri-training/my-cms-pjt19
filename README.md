@@ -50,6 +50,17 @@ See [`CONTRIBUTING.md`](https://github.com/zuri-training/my-cms-pjt19/blob/main/
 - [Database Schema](https://bit.ly/Team19_databaseSchema)
 - [Designs from the Product Design Team](https://bit.ly/Team19_myCMS_optimusDesign)
 
+
+## To deploy
+- copy the link to the repo `https://github.com/zuri-training/my-cms-pjt19`
+- on your local, run `git clone https://github.com/zuri-training/my-cms-pjt19`
+- run `cd my-cms-pjt19`
+- run `virtualenv -p python3 env`
+- run `/env/scripts/activate`
+- run `pip install -r requirements.txt`
+- run `cd optimus`
+- run `py manage.py runserver`
+
 ## Contributors
 
 <details><summary>Developers</summary>
