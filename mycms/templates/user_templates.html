@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static '/css/dashboard.css'%}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap-5.0.2-dist/css/bootstrap.min.css'%}">
+    <!-- tailwind css -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+
+    <div class="sideMenu">
+        <div class="top-header m-4">
+            <a href="{% url 'index' %}" style="text-decoration: none;">
+                <div>
+                    <img src="{% static '/images/assets/Group 59933.png'%}" alt="">
+                    <img src="{% static '/images/assets/Group 59932.png'%}" alt="">
+                </div>
+            </a>
+        </div>
+
+        <div class="side-menu-nav p-5">
+            <div class="mb-3 side-links" >
+                <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
+                <a href="{% url 'home' %}" class="side-menu-link">My Templates</a>
+            </div>
+            <div class="mb-3 side-links" >
+                <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
+                <a href="{% url 'templates' %}" class="side-menu-link">All Templates</a>
+            </div>
+            <div class="mb-3 side-links">
+                <span><img src="{%  static 'images/assets/Group 59834.png'%}" class="icon" alt=""></span>
+                <a href="./portfolio.html" class="side-menu-link">Portfolio</a>
+                
+            </div>
+            <div class="mb-3 side-links">
+                <span><img src="{%  static 'images/assets/Group 59847.png'%}" class="icon" alt=""></span>
+                <a href="./landingPage.html" class="side-menu-link"> Landing Page</a>
+            </div>
+            <div class="mb-3 side-links">
+                <span><img src="{%  static 'images/assets/data.png'%}" class="icon" alt=""></span>
+                <a href="./blog.html" class="side-menu-link">Blog</a>
+            </div>
+        </div>
+        <hr class="line">
+
+        <div class="down-menu-nav px-5">
+            <div class="mb-3">
+                <a href="#" class="side-menu-link">Invite Teammates</a>
+            </div>
+            <div class="mb-3 side-links" >
+                <span><img src="{%  static 'images/assets/Group 59838.png'%}" class="icon" alt=""></span>
+                <a href="#" class="side-menu-link">Support</a>
+            </div>
+        </div>
+
+        <div class="logout px-5 side-links ">
+            <a href="{% url 'logout' %}" style="text-decoration: none; color: white;">
+                <span><img src="{%  static 'images/assets/Group 59846.png'%}" class="icon" alt=""></span>
+                <span>Logout</span>
+            </a>
+        </div>
+        <hr class="line">
+
+    </div>
+    {% if user.is_authenticated %}
+        <main class="main-container">
+            <div class="greeting mb-3 text-center pt-5">
+                <h1 class="">Good Afternoon {{user.name}}</h1>
+            </div>
+
+            <p class="text-center top-para">Create Something Magical today from Our Templates </p>
+
+            <a href="{% url 'addtemplate' %}" >
+                <!-- Heroicon name: solid/check -->
+                <button style="background-color: #0D6EFD; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; padding: 10px 22px; border: none; border-radius: 12px;">
+                    Create Template
+                </button> 
+            </a>
+
+            <div class="templateContainers">    
+                {% if usertemplates %}
+                    {% for usertemplate in usertemplates %}
+                        <div>
+                            {% if usertemplate.thumbnails == "none" %}
+                                <img src="{% static '/Images/default/Default2.png' %}" alt="">
+                            {% else %}
+                                <img src="{{ usertemplate.thumbnails.url }}" alt="">
+                            {% endif %}
+                            <div class="template-text">
+                                <h3 class="fs-4">Photography</h3>
+                                <a href="/editMyTemplate/{{ usertemplate.id }}" style="text-decoration: none;">
+                                    <span class="absolute inset-0"></span>
+                                    <h3 class="view">View Template</h3>
+                                  </a>
+                            </div> 
+                            <div class="template-text">
+                                <a href="/preview/{{ usertemplate.id }}" style="text-decoration: none;">
+                                    <span class="absolute inset-0"></span>
+                                    <h3 class="view">Preview</h3>
+                                  </a>
+                            </div> 
+                        </div>    
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </main>
+    {% else %}
+    <main class="main-container">
+        <div class="greeting mb-3 text-center pt-5">
+            <h1 class="">Good Afternoon {{user.name}}</h1>
+        </div>
+
+        <p class="text-center top-para">Create Something Magical today from Our Templates </p>
+
+        <a href="{% url 'addtemplate' %}" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <!-- Heroicon name: solid/check -->
+            Add new
+        </a>
+
+        <!-- <div class="templateContainers">    
+            {% if usertemplates %}
+                {% for usertemplate in usertemplates %}
+                    <div>
+                        <img src="{{ usertemplate.thumbnails.url }}" alt="">
+
+                        <div class="template-text">
+                            <h3 class="fs-4">Photography</h3>
+                            <a href="/edit/{{ usertemplate.id }}" style="text-decoration: none;">
+                                <span class="absolute inset-0"></span>
+                                <h3 class="view">View Template</h3>
+                              </a>
+                        </div> 
+                    </div>    
+                {% endfor %}
+            {% endif %}
+
+        </div> -->
+
+    </main>
+
+    {% endif %}
+
+    
+</body>
+</html>

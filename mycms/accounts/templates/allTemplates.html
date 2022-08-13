@@ -21,7 +21,11 @@
         <div class="side-menu-nav p-5">
             <div class="mb-3 side-links" >
                 <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
-                <a href="./allTemplates.html" class="side-menu-link">All Templates</a>
+                <a href="{% url 'templates' %}" class="side-menu-link">My Templates</a>
+            </div>
+            <div class="mb-3 side-links" >
+                <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
+                <a href="{% url 'home' %}" class="side-menu-link">All Templates</a>
             </div>
             <div class="mb-3 side-links">
                 <span><img src="{%  static 'images/assets/Group 59834.png'%}" class="icon" alt=""></span>
