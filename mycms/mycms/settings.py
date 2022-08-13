@@ -15,8 +15,15 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+STATIC_DIR = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(SETTINGS_PATH, 'static')
+)
+
+
 TEMPLATES_DIR = (
     os.path.join(BASE_DIR, 'templates'),
     os.path.join(SETTINGS_PATH, 'templates'),

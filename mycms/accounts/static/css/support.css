@@ -183,10 +183,6 @@ html {
 }
 
 .hero-section {
-  background-image: url("./assets/banner.PNG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   min-height: 450px;
   display: flex;
   justify-content: center;
@@ -393,7 +389,7 @@ html {
   row-gap: 2em;
   justify-items: center;
   margin-bottom: 1.5em;
-  text-align: center;
+  text-align: left;
 }
 
 #footer-main h3 {

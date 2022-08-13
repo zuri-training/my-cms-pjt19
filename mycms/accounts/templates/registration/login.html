@@ -65,15 +65,16 @@
        <div class="col-12 col-lg-6">
         <div class="card border-0 p-3">
           <h2 class="text-center pb-5">Fill in to complete sign in</h2>
-          <form name="login" method="post" autocomplete="false ">
+          <form name="login" method="post" autocomplete="off">
             {% csrf_token%}
+            <input autocomplete="false" name="hidden" type="text" style="display:none;">
             <div class="mb-2">
               <label for="id_username" class="form-label">Email</label>
-              <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="255" class="form-control" required id="id_username">
+              <input type="text" name="username" autofocus autocapitalize="none" maxlength="255" class="form-control" required id="id_username" placeholder="Enter email">
             </div>
             <div class="mb-2">
               <label for="id_password" class="form-label">Password</label>
-              <input type="password" class='form-control' name="password" autocomplete="current-password" class="form-control" required id="id_password">
+              <input type="password" class='form-control' name="password" class="form-control" required id="id_password" placeholder="Enter password">
             </div>
             <button id="button" type="submit" class="btn btn-primary text-center my-4">Continue</button>
             <p class="text-center my-4">New User? <a href="/sign-up">Create an account</a></p>
