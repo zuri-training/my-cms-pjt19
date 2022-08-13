@@ -154,12 +154,27 @@ html {
   color: #5720b7;
   background-color: transparent;
   padding: 14px 41px;
+  transition: 1s linear;
 }
+
+.navbar ul li .link-btn:hover{
+  background-color: #5720b7;
+  color: #fff;
+  transition: 1s linear;
+  }
 
 .navbar ul li .btn-primary {
   background-color: #7839ee;
   color: #fff;
   padding: 14px 41px;
+  transition: 1s linear;
+}
+
+.navbar ul li .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 .container {

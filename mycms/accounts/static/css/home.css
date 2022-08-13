@@ -172,12 +172,27 @@ a {
   color: #5720b7;
   background-color: transparent;
   padding: 14px 41px;
+  transition: 1s linear;
 }
+
+#showcase .navbar ul li .link-btn:hover{
+  background-color: #5720b7;
+  color: #fff;
+  transition: 1s linear;
+  }
 
 #showcase .navbar ul li .btn-primary {
   background-color: #7839ee;
   color: #fff;
   padding: 14px 41px;
+  transition: 1s linear;
+}
+
+#showcase .navbar ul li .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 #showcase .showcase-content {
@@ -213,6 +228,14 @@ a {
 #showcase .showcase-content button {
   margin-top: 64px;
   padding: 24px 60.5px;
+  transition: 1s linear;
+}
+
+#showcase .showcase-content button:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 #templates {
@@ -364,6 +387,14 @@ a {
 
 #quarterly .btn-primary {
   margin-bottom: 57px;
+  transition: 1s linear;
+}
+
+#quarterly .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 #get-started {
@@ -401,8 +432,14 @@ a {
 
 #get-started .btn-primary {
   margin-bottom: 100px;
+  transition: 1s linear;
 }
-
+#get-started .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
+}
 #footer-main {
   background: #491c96;
   color: #fff;
@@ -411,6 +448,7 @@ a {
   padding-right: 8%;
   padding-bottom: 3%;
 }
+
 
 .footer-wrapper {
   display: grid;
