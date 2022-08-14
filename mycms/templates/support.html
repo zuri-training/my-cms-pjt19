@@ -24,12 +24,20 @@
           </div>
     
           <div class="links">
+            {% if user.is_authenticated %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a href="/home">{{ user.name }}</a></li>
+            </ul>
+            {% else %}
             <ul>
               <li><a href="/about">About</a></li>
               <li><a href="./support">Support</a></li>
               <li><a class="link-btn" href="/login">Login</a></li>
-              <li><a class="link-btn btn-primary" href="/sign-up">Register</a></li>
+              <li><a class="" href="/sign-up">Register</li>
             </ul>
+            {%  endif %}
           </div>
   
           <div class="menu-bar">

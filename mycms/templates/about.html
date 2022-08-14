@@ -20,16 +20,24 @@
     <div class="container">
         <nav class="navbar">
           <div class="logo">
-            <a href="./index.html"><img src="{% static '/images/optimus/Frame 60200.png' %}" alt="optimus logo" width="155px"></a>
+            <a href="./index"><img src="{% static '/images/optimus/Frame 60200.png' %}" alt="optimus logo" width="155px"></a>
           </div>
     
           <div class="links">
+            {% if user.is_authenticated %}
             <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/support">Support</a></li>
-                <li><a class="link-btn" href="/login">Login</a></li>
-                <li><a class="link-btn btn-primary" href="/signup">Register</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a href="/home">{{ user.name }}</a></li>
             </ul>
+            {% else %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a class="link-btn" href="/login">Login</a></li>
+              <li><a class="" href="/sign-up">Register</li>
+            </ul>
+            {%  endif %}
           </div>
   
           <div class="menu-bar">

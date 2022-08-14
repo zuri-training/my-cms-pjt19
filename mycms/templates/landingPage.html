@@ -19,10 +19,12 @@
             <i class="fa-solid fa-bars"></i>
         </div>
     
-        <div class="top-header m-4">
-            <div><img src="{% static "\images/assets\Group 59933.png" %}" alt=""></div>
-            <div><img src="{% static "\images/assets\Group 59932.png" %}" alt=""></div>
-        </div>
+        <a href="/home">
+            <div class="top-header m-4">
+              <div><img src="{% static '/images/assets/Group 59933.png'%}" alt=""></div>
+              <div><img src="{% static '/images/assets/Group 59932.png'%}" alt=""></div>
+            </div>
+          </a>
 
         <div class="side-menu-nav">
             
@@ -80,7 +82,7 @@
     <main class="main-container">
         {% if user.is_authenticated %}
         <div class="greeting mb-3 text-center pt-5">
-            <h1 class="">Good Afternoon {{ user.name}}</h1>
+            <h1 class="">Welcome {{ user.name}}</h1>
         </div>
         {% else %}
         <div class="greeting mb-3 text-center pt-5">
