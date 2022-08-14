@@ -32,13 +32,20 @@
         </div>
   
         <div class="links">
-          <ul>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'support'%}">Support</a></li>
-            <li><a class="link-btn" href="/login">Login</a></li>
-            <li><a class="link-btn btn-primary" href="/sign-up">Register</a></li>
-          </ul>
-        </div>
+          {% if user.is_authenticated %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a href="/home">{{ user.name }}</a></li>
+            </ul>
+          {% else %}
+            <ul>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'support'%}">Support</a></li>
+              <li><a class="link-btn" href="/login">Login</a></li>
+              <li><a class="link-btn btn-primary" href="/sign-up">Register</a></li>
+            </ul>
+          {%  endif %}
 
         <div class="menu-bar">
           <i class="fa-solid fa-bars"></i>
