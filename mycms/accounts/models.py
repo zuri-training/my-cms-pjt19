@@ -10,7 +10,7 @@ class User(AbstractBaseUser, PermissionsMixin):
   name = models.CharField(max_length = 240)
   email = models.EmailField(max_length = 255, unique=True)
   mobile = models.CharField(max_length = 50)
-  password = models.CharField(max_length = 240)
+  password1 = models.CharField(max_length = 240)
 
   is_staff = models.BooleanField(default=True)
   is_active = models.BooleanField(default=True)
@@ -19,7 +19,7 @@ class User(AbstractBaseUser, PermissionsMixin):
   objects = CustomUserManager()
 
   USERNAME_FIELD = 'email'
-  REQUIRED_FIELDS = ['name','mobile','password']
+  REQUIRED_FIELDS = ['name','mobile','password1', 'password2']
   
   class Meta:
     ordering = ['email']
