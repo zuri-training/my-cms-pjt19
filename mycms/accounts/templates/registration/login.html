@@ -36,7 +36,10 @@
     }
 
     .btn:hover {
-      background-color: #7130DA;
+      border:1px solid #7130DA;
+      background: #fff;
+      color: #7130DA;
+      transition: 1s linear;
     }
 
     .btn:disabled {
@@ -54,27 +57,36 @@
     </header>
 
     <main id="main">
-      <div class="d-flex" width="100%">
-        <div class="image d-flex" style="width:45%;">
+      <div class="container" width=""100%>
+
+       <div class="row">
+
+        <div class="col-12 col-lg-6">
           <img src="{% static './images/optimus/amico.png' %}" alt="A man with a key" class="my-auto img-fluid" width="100%">
         </div>
 
-        <div class="card border-0 p-5" style="width: 55%;">
+       <div class="col-12 col-lg-6">
+        <div class="card border-0 p-3">
           <h2 class="text-center pb-5">Fill in to complete sign in</h2>
-          <form name="login" action="/home" method="get">
+          <form name="login" method="post" autocomplete="off">
             {% csrf_token%}
+            <input autocomplete="false" name="hidden" type="text" style="display:none;">
             <div class="mb-2">
-              <label for="id_email" class='form-label'>Email</label>
-              <input type="email" name="email" maxlength="255" autofocus required id="id_email" class='form-control' placeholder="Enter your email">
+              <label for="id_username" class="form-label">Email</label>
+              <input type="text" name="username" autofocus autocapitalize="none" maxlength="255" class="form-control" required id="id_username" placeholder="Enter email">
             </div>
             <div class="mb-2">
-              <label for="id_password1" class='form-label'>Password</label>
-              <input type="password" name="password1" autocomplete="new-password" required id="id_password1" class='form-control' placeholder="input password" >
+              <label for="id_password" class="form-label">Password</label>
+              <input type="password" class='form-control' name="password" class="form-control" required id="id_password" placeholder="Enter password">
             </div>
             <button id="button" type="submit" class="btn btn-primary text-center my-4">Continue</button>
             <p class="text-center my-4">New User? <a href="/sign-up">Create an account</a></p>
           </form>
         </div>
+       </div>
+
+       </div>
+
       </div>
     </main>
   </div>

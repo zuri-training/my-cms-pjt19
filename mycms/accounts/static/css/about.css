@@ -1,0 +1,549 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Sora";
+  position: relative;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-bar {
+  font-size: 2em;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 0.3em;
+  top: 0.8em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 14px 0;
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 4px;
+  color: #1d2939;
+  margin: 12px;
+  display: inline-block;
+}
+
+.navbar ul li .link-btn {
+  border: #5720b7 solid 1px;
+  color: #5720b7;
+  background-color: transparent;
+  padding: 14px 41px;
+  transition: 1s linear;
+}
+
+.navbar ul li .link-btn:hover{
+  background-color: #5720b7;
+  color: #fff;
+  transition: 1s linear;
+  }
+
+.navbar ul li .btn-primary {
+  background-color: #7839ee;
+  color: #fff;
+  padding: 14px 41px;
+  transition: 1s linear;
+}
+ 
+.navbar ul li .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #7839ee;
+  color: #fff;
+
+  outline: 0;
+  border: none;
+  border-radius: 4px;
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.about-hero {
+  height: 450px;
+}
+
+.header-section {
+  padding: 4% 8% 4% 8%;
+}
+
+.header-section h1 {
+  font-family: Sora;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.header-section p {
+  font-family: Sora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  column-gap: 3em;
+}
+.mission-section {
+  padding: 4% 8% 4% 8%;
+}
+.mission-img {
+  width: 24em;
+  cursor: pointer;
+}
+
+.mission-header {
+  font-family: Sora;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.mission-para {
+  font-family: Sora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.team-section {
+  padding: 4% 8% 4% 8%;
+}
+.team-header {
+  font-family: Sora;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2em;
+  row-gap: 3em;
+  place-items: center;
+}
+
+.team-img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+}
+
+.team-img > img {
+  height: 100%;
+  width: 100%;
+}
+
+.name {
+  font-family: Sora;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  margin-top: 1em;
+  color: #1d2939;
+  text-align: center;
+}
+
+.role {
+  font-family: Sora;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  color: #1d2939;
+  text-align: center;
+}
+
+.bottom-get-started {
+  padding: 4% 8% 4% 8%;
+}
+
+.bottom-grid {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 2em;
+}
+
+.bottom-header {
+  font-family: Sora;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #101828;
+  margin-bottom: 1.5em;
+}
+
+.bottom-img {
+  width: 18em;
+  cursor: pointer;
+}
+
+.bottom-para {
+  font-family: Sora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.btn-get-started {
+  background: #7839ee;
+  color: #fff;
+  padding: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+  border: none;
+  width: 13em;
+  font-weight: bold;
+  font-size: 1.2em;
+  outline: none;
+  transition: 1s ease-in;
+  border-radius: 4px;
+}
+
+.btn-get-started:hover {
+  background: #fff;
+  color: #7839ee;
+  border: 1px solid #7839ee;
+}
+
+#footer-main {
+  background: #491c96;
+  color: #fff;
+  padding-top: 80px;
+  text-align: center;
+}
+
+#footer-main {
+  background: #491c96;
+  color: #fff;
+  padding-top: 80px;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 3%;
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 120px;
+  row-gap: 2em;
+  justify-items: center;
+  margin-bottom: 1.5em;
+}
+
+#footer-main h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+#footer-main .container ul li a {
+  color: #fff;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 2rem 0;
+  letter-spacing: -0.02em;
+  display: inline;
+  text-decoration: none;
+}
+
+#footer-main .container .footer-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#footer-main .container .footer-details a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.terms {
+  border-right: 1px solid #fff;
+  padding-right: 1em;
+}
+
+.privacy {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .mission-img {
+    width: 18em;
+  }
+  .links {
+    display: none;
+    text-align: center;
+    transition: 1s linear;
+  }
+
+  .show-nav {
+    display: block;
+    transition: 1s linear;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+  }
+
+  .links {
+    margin-top: 4em;
+  }
+
+  .navbar ul {
+    display: block;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .about-hero {
+    margin-top: 5em;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+
+  .mission-header {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .mission-para {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bottom-grid {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .bottom-header {
+    text-align: center;
+  }
+
+  .bottom-para {
+    text-align: center;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+  }
+
+  .header-section h1 {
+    font-size: 36px;
+  }
+
+  .header-section p {
+    font-size: 18px;
+  }
+
+  .terms,
+  .privacy,
+  .copy {
+    font-size: 14px;
+  }
+
+  .footer-details {
+    flex-direction: column;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .mission-img {
+    width: 15em;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,36 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
-	line-height: 1;
-  max-width: 100vw;
+  line-height: 1;
+  width: 100vw;
   overflow-x: hidden;
-  font-family: 'Sora';
+  font-family: "Sora";
   position: relative;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 a {
@@ -46,13 +115,13 @@ a {
 }
 
 .btn-primary {
-  background-color: #7839EE;
+  background-color: #7839ee;
   color: #fff;
   padding: 14px 41px;
   outline: 0;
   border: none;
   border-radius: 4px;
-  font-family: 'Sora';
+  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -61,10 +130,18 @@ a {
 }
 
 #showcase {
-  background-image: url("{% static './images/optimus/Frame\ 59894.png' %}") no-repeat center center/cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding-top: 1rem;
+}
+
+.menu-bar {
+  font-size: 2em;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
 }
 
 #showcase .navbar {
@@ -79,36 +156,58 @@ a {
 
 #showcase .navbar ul li a {
   padding: 14px 0;
-  font-family: 'Sora';
+  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   border-radius: 4px;
-  color: #1D2939;
+  color: #1d2939;
   margin: 12px;
   display: inline-block;
 }
 
 #showcase .navbar ul li .link-btn {
-  border: #5720B7 solid 1px;
-  color: #5720B7;
+  border: #5720b7 solid 1px;
+  color: #5720b7;
   background-color: transparent;
   padding: 14px 41px;
+  transition: 1s linear;
 }
 
+#showcase .navbar ul li .link-btn:hover{
+  background-color: #5720b7;
+  color: #fff;
+  transition: 1s linear;
+  }
+
 #showcase .navbar ul li .btn-primary {
-  background-color: #7839EE;
+  background-color: #7839ee;
   color: #fff;
   padding: 14px 41px;
+  transition: 1s linear;
+}
+
+#showcase .navbar ul li .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 #showcase .showcase-content {
-  font-family: 'Sora';
+  font-family: "Sora";
   font-style: normal;
   text-align: center;
-  color: #1D2939;
-  margin: 209px 279px 155px 279px;
+  color: #1d2939;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 7%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 7%;
 }
 
 #showcase .showcase-content h1 {
@@ -122,15 +221,25 @@ a {
   font-weight: 400;
   font-size: 24px;
   line-height: 38px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 #showcase .showcase-content button {
   margin-top: 64px;
   padding: 24px 60.5px;
+  transition: 1s linear;
+}
+
+#showcase .showcase-content button:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 #templates {
-  background: #F9FAFB;
+  background: #f9fafb;
   padding-bottom: 120px;
 }
 
@@ -143,15 +252,27 @@ a {
   line-height: 60px;
   letter-spacing: -0.02em;
   color: #101828;
+  margin-bottom: 1.5em;
 }
 
-#templates .gridview {
-  width: 90%;
+#templates {
+  padding: 2% 8% 10% 8%;
+}
+
+#gridview {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-  margin: auto;
-  margin-top: 64px;
+  column-gap: 3em;
+  row-gap: 3em;
+  place-items: center;
+}
+
+.box-lg {
+  object-fit: cover;
+  cursor: pointer;
+}
+.box-lg > img {
+  width: 100%;
 }
 
 #templates .gridview .box-txt {
@@ -164,14 +285,14 @@ a {
 
 #templates .gridview .box-txt h5 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
   letter-spacing: -0.02em;
 }
 
 #templates .gridview .box-txt a {
-  color: #5720B7;
-  font-weight: 400; 
+  color: #5720b7;
+  font-weight: 600;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: -0.02em;
@@ -189,20 +310,31 @@ a {
 
 #why .flexbox {
   display: grid;
-  margin: 0 158px 0 158px;
   grid-template-columns: repeat(4, 1fr);
   gap: 41px;
+  place-items: center;
   margin-bottom: 96px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.box-sm > img {
+  width: 7em;
+  height: 7em;
+}
+
+.box-sm {
+  height: 24em;
 }
 
 #why .flexbox .box-sm {
   color: #000;
-  padding: 1rem;
+  padding: 1.3rem;
   border: 1px #667085 solid;
   border-radius: 4px;
 }
 
-#why .flexbox .box-sm h5{
+#why .flexbox .box-sm h5 {
   letter-spacing: -0.02em;
   font-weight: 600;
   font-size: 16px;
@@ -219,7 +351,7 @@ a {
 }
 
 #quarterly {
-  background: #F9FAFB;
+  background: #f9fafb;
   text-align: center;
 }
 
@@ -233,28 +365,53 @@ a {
 }
 
 #quarterly .box-container {
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 824px;
-  gap: 56px;
-  margin-bottom: 48px;
+  gap: 2em;
+  margin-bottom: 2.5em;
+  place-items: center;
+  padding-left: 8%;
+  padding-right: 8%;
+  cursor: pointer;
+  transition: 1s linear;
+}
+
+.box-md:hover {
+  transform: translateY(-2%);
+  transition: 1s linear;
+}
+
+.box-md > img {
+  width: 100%;
 }
 
 #quarterly .btn-primary {
   margin-bottom: 57px;
-  padding: 24px;
+  transition: 1s linear;
+}
+
+#quarterly .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
 }
 
 #get-started {
-  width: 80%;
-  margin: 143px auto;
   display: flex;
   justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 4em;
 }
 
-#get-started .details {
-  width: 50%;
+.flex-img {
+  max-width: 20em;
+  object-fit: cover;
+}
+
+.flex-img > img {
+  width: 100%;
 }
 
 #get-started .details h3 {
@@ -269,25 +426,38 @@ a {
 #get-started .details p {
   font-size: 24px;
   line-height: 38px;
-  color: #1D2939;
+  color: #1d2939;
   margin-bottom: 104px;
 }
 
 #get-started .btn-primary {
-  padding: 24px;
   margin-bottom: 100px;
+  transition: 1s linear;
 }
-
+#get-started .btn-primary:hover{
+  border:#7839ee solid 1px ;
+  color: #7839ee;
+  background: #fff;
+  transition: 1s linear;
+}
 #footer-main {
-  background: #491C96;
+  background: #491c96;
   color: #fff;
   padding-top: 80px;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 3%;
 }
 
-#footer-main .container {
+
+.footer-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 120px;
+  column-gap: 120px;
+  row-gap: 2em;
+  justify-items: center;
+  margin-bottom: 1.5em;
+  text-align: left;
 }
 
 #footer-main h3 {
@@ -308,25 +478,147 @@ a {
 }
 
 #footer-main .container .footer-details {
-  grid-column: 1  / span 4;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
-#footer-main .container .footer-details ul {
-  display: flex;
+#footer-main .container .footer-details a {
+  color: #fff;
 }
 
-#footer-main .container .footer-details ul li a{
-  font-size: 16px;
-  font-weight: 100;
-  align-self: flex-end;
-  padding: 0 1rem;
-}
-
-#footer-main .container .footer-details ul li .border-end {
+.terms {
   border-right: 1px solid #fff;
-  padding-left: 0;
+  padding-right: 1em;
+}
+
+.privacy {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 920px) {
+  #why .flexbox {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-lg {
+    max-width: 24em;
+  }
+
+  .links {
+    display: none;
+    text-align: center;
+    transition: 1s linear;
+  }
+
+  .show-nav {
+    display: block;
+    transition: 1s linear;
+  }
+
+  .toggle-background {
+    background: #fff;
+    transition: 0.2s ease-in-out;
+  }
+
+  .terms,
+  .privacy,
+  .copy {
+    font-size: 14px;
+  }
+
+  #templates .gridview {
+    grid-template-columns: 1fr;
+  }
+
+  #why .flexbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #quarterly .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-details {
+    flex-direction: column;
+  }
+
+  #showcase .showcase-content h1 {
+    font-size: 32px;
+    margin-top: 2em;
+  }
+
+  #showcase .showcase-content p {
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #showcase .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    position: absolute;
+    left: 1em;
+  }
+
+  .links {
+    margin-top: 4em;
+  }
+
+  #showcase .navbar ul {
+    display: block;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #get-started {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #get-started .details h3 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #get-started .details p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #quarterly .box-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #why .flexbox {
+    grid-template-columns: 1fr;
+  }
+  #templates .gridview {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #templates .gridview .box-txt a {
+    font-size: 12px;
+  }
+
+  #templates .gridview .box-txt h5 {
+    font-size: 10px;
+  }
 }

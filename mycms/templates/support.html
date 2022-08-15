@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimus | Support</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/support.css' %}">
+    <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      .hero-section {
+        background: url("{% static '/images/optimus/banner.PNG' %}") no-repeat center center/cover;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index"><img src="{% static '\images\optimus\Frame 60200.png' %}" alt="optimus logo" width="155px"></a>
+          </div>
+    
+          <div class="links">
+            {% if user.is_authenticated %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a href="/home">{{ user.name }}</a></li>
+            </ul>
+            {% else %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a class="link-btn" href="/login">Login</a></li>
+              <li><a class="" href="/sign-up">Register</li>
+            </ul>
+            {%  endif %}
+          </div>
+  
+          <div class="menu-bar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+
+    <section class="hero-section">
+      <h1 class="hero-header1" data-aos="zoom-in-down">
+        At Optimus, our mission is to enable users express 
+        themselves and establish an online presence.
+      </h1>
+      <h3 class="hero-header2" data-aos="zoom-in-up">We are here to serve you better.</h3>
+    </section>
+
+    <section class="section-1" id"FAQs">
+        <h2 class="freq-header" data-aos="zoom-out-down"> Frequently asked questions</h2>
+
+        <p class="freq-para" data-aos="zoom-out-in">
+            Optimus customer support is always ready and excited to help.
+        </p>
+
+        <div class="btn-container" data-aos="fade-up">
+            <a href="#contact"><button class="btn-support">Contact Support</button></a>
+        </div>
+
+        <div class="question-container">
+            <div class="question" data-aos="fade-down">
+                <div class="question-header">
+                    <h3>Is Optimus free?</h3>
+                    <div><img src="{% static "\images\optimus\No Credit Cards.png" %}" alt="Credit cad"></div>
+                </div>
+
+                <p>
+                    Yes! Optimus is absolutely free. Make use of it with zero charges 
+                    No Credit card needed.
+                </p>
+            </div>
+
+            <div class="question" data-aos="fade-up">
+                <div class="question-header">
+                    <h3>I can’t create an account</h3>
+                    <div><img src="{%static "\images\optimus\Account.png" %}" alt="Credit cad"></div>
+                </div>
+
+                <p>
+                    Kindly check through if you used a valid and active email address.
+                    Make sure you have a stable internet connection.
+                </p>
+            </div>
+
+            <div class="question" data-aos="fade-down">
+                <div class="question-header">
+                    <h3>How many websites can I create with my account?</h3>
+                    <div><img src="{% static "\images\optimus\Whois.png" %}" alt="Credit cad"></div>
+                </div>
+
+                <p>
+                    You can create as much as possible. All you have to do is to create  an
+                    Optimus account and start bringing your imaginations to life.
+                </p>
+            </div>
+
+            <div class="question" data-aos="fade-up">
+                <div class="question-header">
+                    <h3>What are the benefits of using Optimus?</h3>
+                    <div><img src="{% static "\images\optimus\Increase.png" %}" alt="Credit cad"></div>
+                </div>
+
+                <p>
+                    Our templates are very friendly with the search engine optimization.
+                    Launch your product easily with our free customizable template.
+                    Unlimited template download free of charge.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-2">
+        <div class="grid-section" id="contact">
+           <div>
+               <div class="contact-header" data-aos="zoom-in-down">Contact Us</div>  
+               <p class="contact-para" data-aos="zoom-out-up"> 
+                   Need something else? 
+                   Feel free to send us an email <br> from 
+                   Monday through Friday and we will do our 
+                   best  <br> to respond within 24 -48 business hours.
+                </p>
+
+                <p class="email-para" data-aos="fade-down">
+                   <a href="mailto:OptimusCms@outlook.com" class="email">
+                        Email Us : OptimusCms@outlook.com
+                   </a>
+                </p>
+
+                <p class="phone" data-aos="fade-up">  Telephone: <a href="tel:+1 (303) 650-2786">+1 (303) 650-2786</a> , <a href="tel:+234 817-995-5656">+234 817-995-5656</a> </p>
+           </div>
+
+           <div class="contact-img" data-aos="zoom-in-up">
+               <img src="{%static "\images\optimus\Frame 60728.png" %}" alt="">
+           </div>
+        </div>
+
+    </section>
+
+    <footer id="footer-main">
+        <div class="container">
+         <div class="footer-wrapper">
+          <div class="templates">
+            <h3>Templates</h3>
+            <ul>
+              <li><a href="/home/landingpages">Landing page</a></li>
+              <li><a href="/home/portfolio">Portfolio</a></li>
+              <li><a href="/home/blogs">Blog</a></li>
+            </ul>
+          </div>
+      
+          <div class="career">
+            <h3>Career</h3>
+            <ul>
+              <li><a href="#">Career</a></li>
+              <li><a href="/home/support">Contact support</a></li>
+              <li><a href="#FAQs">FAQ</a></li>
+            </ul>
+          </div>
+      
+          <div class="partners">
+            <h3>Partners</h3>
+            <ul>
+              <li><a href="#">Partner with us</a></li>
+            </ul>
+          </div>
+      
+          <div>
+          </div>
+      
+         </div>
+          <div class="footer-details pt-5">
+             <div>
+              <span class="terms"><a href="">Terms and conditions</a></span>
+              <span class="privacy"><a href="">Privacy policy</a></span>
+             </div>
+            
+      
+            <p class="copy">&copy; 2022 Optimus Limited</p>
+          </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+   <script src="{% static "\js\script.js" %}"></script>
+</body>
+</html>

@@ -33,10 +33,14 @@
       background-color: #7839EE;
       border: 0;
       height: 50px;
+      transition: 1s linear;
     }
 
     .btn:hover {
-      background-color: #7130DA;
+      border:1px solid #7130DA;
+      background: #fff;
+      color: #7130DA;
+      transition: 1s linear;
     }
 
     .btn:disabled {
@@ -55,39 +59,44 @@
     </header>
 
     <main id="main">
-      <div class="d-flex" width="100%">
-        <div class="image d-flex" style="width:45%;">
+      <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
           <img src="{% static './images/optimus/amico-signup.png' %}" alt="A man with a key" class="my-auto img-fluid" width="100%">
         </div>
 
-        <div class="card border-0 p-3" style="width: 55%;">
-          <h2 class="text-center pb-2">Fill in to complete sign up</h2>
-          <form name="signup" method="post">
-            {% csrf_token %}
-            <div class="mb-2">
-              <label for="id_email" class='form-label'>Email</label>
-              <input type="email" name="email" maxlength="255" autofocus required id="id_email" class='form-control' placeholder="Enter your email">
-            </div>
-            <div class="mb-2">
-              <label for="id_name" class='form-label'>Name</label>
-              <input type="text" name="name" maxlength="240" required id="id_name" class='form-control' placeholder="John Doe">
-            </div>
-            <div class="mb-2">
-              <label for="id_mobile" class='form-label'>Mobile</label>
-              <input type="text" name="mobile" maxlength="50" required id="id_mobile" class='form-control' placeholder="+234 123 456 7890">
-            </div>
-            <div class="mb-2">
-              <label for="id_password1" class='form-label'>Password</label>
-              <input type="password" name="password1" autocomplete="new-password" required id="id_password1" class='form-control' placeholder="input password" >
-            </div>
-            <div class="mb-2">
-              <label for="id_password2" class='form-label'>Confirm Password</label>
-              <input type="password" name="password2" autocomplete="new-password" required id="id_password2" class='form-control' placeholder="Confirm Password">
-            </div>
-            <button id="button" type="submit" class="btn btn-primary text-center mt-2">Continue</button>
-            <p class="text-center">Already have an account? <a href="/login">Log in</a></p>
-          </form>
+        <div class="col-12 col-lg-6">
+          <div class="card border-0 p-3">
+            <h2 class="text-center pb-2">Fill in to complete sign up</h2>
+            <form name="signup" method="post">
+              {% csrf_token %}
+              <div class="mb-2">
+                <label for="id_email" class='form-label'>Email</label>
+                <input type="email" name="email" maxlength="255" autofocus required id="id_email" class='form-control' placeholder="Enter your email">
+              </div>
+              <div class="mb-2">
+                <label for="id_name" class='form-label'>Name</label>
+                <input type="text" name="name" maxlength="240" required id="id_name" class='form-control' placeholder="John Doe">
+              </div>
+              <div class="mb-2">
+                <label for="id_mobile" class='form-label'>Mobile</label>
+                <input type="text" name="mobile" maxlength="50" required id="id_mobile" class='form-control' placeholder="+234 123 456 7890">
+              </div>
+              <div class="mb-2">
+                <label for="id_password1" class='form-label'>Password</label>
+                <input type="password" name="password1" autocomplete="new-password" required id="id_password1" class='form-control' placeholder="input password" >
+              </div>
+              <div class="mb-2">
+                <label for="id_password2" class='form-label'>Confirm Password</label>
+                <input type="password" name="password2" autocomplete="new-password" required id="id_password2" class='form-control' placeholder="Confirm Password">
+              </div>
+              <button id="button" type="submit" class="btn btn-primary text-center mt-2">Continue</button>
+              <p class="text-center">Already have an account? <a href="/login">Log in</a></p>
+            </form>
+          </div>
         </div>
+      </div>
+
       </div>
     </main>
   </div>

@@ -7,159 +7,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     {%load static%}
-    <link rel="stylesheet" href="{% static' ./css/dashboard.css'%}">
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static '/css/dashboard.css'%}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap-5.0.2-dist/css/bootstrap.min.css'%}">
 </head>
 <body>
 
     <div class="sideMenu">
+
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+
+      <a href="/home">
         <div class="top-header m-4">
-            <div><img src="./assets/Group 59933.png" alt=""></div>
-            <div><img src="./assets/Group 59932.png" alt=""></div>
+          <div><img src="{% static '/images/assets/Group 59933.png'%}" alt=""></div>
+          <div><img src="{% static '/images/assets/Group 59932.png'%}" alt=""></div>
         </div>
+      </a>
 
-        <div class="side-menu-nav p-5">
+       <div class="side-menu-nav p-5">
+            
             <div class="mb-3 side-links" >
-                <span><img src="./assets/note.png" alt="" class="icon"></span>
-                <a href="./allTemplates.html" class="side-menu-link">All Templates</a>
+               <a href="/home" class="side-menu-link">
+                    <span><img src="{%  static 'images/assets/note.png'%}" alt="" class="icon"></span>
+                    <span class="link-text">All Templates</span>
+               </a>
             </div>
-            <div class="mb-3 side-links">
-                <span><img src="./assets/Group 59834.png" class="icon" alt=""></span>
-                <a href="./portfolio.html" class="side-menu-link">Portfolio</a>
-                
-            </div>
-            <div class="mb-3 side-links">
-                <span><img src="./assets/Group 59847.png" class="icon" alt=""></span>
-                <a href="./landingPage.html" class="side-menu-link"> Landing Page</a>
-            </div>
-            <div class="mb-3 side-links">
-                <span><img src="./assets/data.png" class="icon" alt=""></span>
-                <a href="./blog.html" class="side-menu-link">Blog</a>
-            </div>
-        </div>
-        <hr class="line">
 
-        <div class="down-menu-nav px-5">
-            <div class="mb-3">
-                <a href="#" class="side-menu-link">Invite Teammates</a>
+            <div class="mb-3 side-links">
+                <a  href="/home/portfolio" class="side-menu-link">
+                    <span><img src="{%  static 'images/assets/Group 59834.png'%}" class="icon" alt=""></span>
+                    <span class="link-text">Portfolio</span>
+                </a>
             </div>
-            <div class="mb-3 side-links" >
-                <span><img src="./assets/Group 59838.png" class="icon" alt=""></span>
-                <a href="#" class="side-menu-link">Support</a>
-            </div>
-        </div>
 
-        <div class="logout px-5 side-links ">
-            <span><img src="./assets/Group 59846.png" class="icon" alt=""></span>
-            <span>Logout</span>
+            <div class="mb-3 side-links">
+                <a href="/home/landingpages" class="side-menu-link">
+                    <span><img src="{%  static 'images/assets/Group 59847.png'%}" class="icon" alt=""></span>
+                    <span class="link-text"> Landing Page</span>
+                </a>
+            </div>
+
+            <div class="mb-3 side-links">
+
+               <a href="/home/blogs" class="side-menu-link">
+                    <span><img src="{%  static 'images/assets/data.png'%}" class="icon" alt=""></span>
+                    <span class="link-text" >Blog</span>
+               </a>
+            </div>
+
+         </div>
+      <hr class="line">
+
+      <div class="down-menu-nav px-5">
+        <div class="mb-3 side-links">
+            <a href="/home/support" class="side-menu-link">
+                <span><img src="{%  static 'images/assets/Group 59838.png'%}" class="icon" alt=""></span>
+                <span class="link-text" >Support</span>
+            </a>
         </div>
-        <hr class="line">
+    </div>
+
+       <div class="logout px-5 side-links ">
+            <a href="/logout" class="side-menu-link">
+                <span><img src="{%  static 'images/assets/Group 59846.png'%}" class="icon" alt=""></span>
+                <span class="link-text" >Logout</span>
+            </a>
+        </div>
+      
+      <hr class="line">
 
     </div>
 
     <main class="main-container">
+        {% if user.is_authenticated %}
         <div class="greeting mb-3 text-center pt-5">
-            <h1 class="">Good Afternoon Edidiong</h1>
+            <h1 class="">Welcome {{ user.name}}</h1>
         </div>
+        {% else %}
+        <div class="greeting mb-3 text-center pt-5">
+            <h1 class="">Good Afternoon</h1>
+        </div>
+        {%  endif %}
 
         <p class="text-center top-para">Create Something Magical today from Our Templates </p>
 
         <div class="templateContainers">
-            <div>
-                <img src="./assets/Frame 59936 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/Frame 59936 1.png'%}" class="temp-image" alt="">
                 
                 <div class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/Logistics1 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/Logistics1 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Logistics</h3>
+                    <h3 >Logistics</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/Food (Beverages)2 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/Food (Beverages)2 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Food</h3>
+                    <h3>Food</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/Fashion landing page1 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/Fashion landing page1 1.png'%}" alt="" class="temp-image" > 
                 <div  class="template-text">
-                    <h3 class="fs-4">Fashion</h3>
+                    <h3>Fashion</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/photography porfolio.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/photography porfolio.png'%}" class="temp-image" alt="">
                 <div  class="template-text" >
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/Design1 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/Design1 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/FOOD LANDING PAGE1 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/FOOD LANDING PAGE1 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Food</h3>
+                    <h3>Food</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
             
-            <div>
-                <img src="./assets/Frame 60687 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/Frame 60687 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
-            <div>
-                <img src="./assets/Design port 1.png" alt="">
+            <div class="template"> 
+                <img src="{%  static 'images/assets/Design port 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4 ">Design</h3>
+                    <h3>Design</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
                    
             </div>
 
-            <div>
-                <img src="./assets/blog 3 1.png" alt="">
+            <div class="template">
+                <img src="{%  static 'images/assets/blog 3 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Photography</h3>
                     <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
+                </div>
+            </div>
+
+            <div class="template">
+                <img src="{%  static 'images/assets/Design1 1.png'%}" class="temp-image" alt="">
+                <div  class="template-text">
+                    <h3>Photography</h3>
+                    <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
             <div>
-                <img src="./assets/Design1 1.png" alt="">
+                <img src="{%  static 'images/assets/Food1 1.png'%}" class="temp-image" alt="">
                 <div  class="template-text">
-                    <h3 class="fs-4">Photography</h3>
+                    <h3>Food</h3>
                     <h3 class="view">View Template</h3>
-                </div>
-            </div>
-
-            <div>
-                <img src="./assets/Food1 1.png" alt="">
-                <div  class="template-text">
-                    <h3 class="fs-4">Food</h3>
-                    <h3 class="view">View Template</h3>
+                    <div class="eye-view"><i class="fa-solid fa-eye"></i></div>
                 </div>
             </div>
 
@@ -167,5 +207,6 @@
 
     </main>
     
+    <script src="{ % static '/js/script.js' % }"></script>
 </body>
 </html>

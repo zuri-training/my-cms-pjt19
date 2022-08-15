@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimus | About</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/about.css'%}">
+    <script src="https://kit.fontawesome.com/ca2912634d.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: url("{% static '/images/optimus/Frame 60387 (1).png' %}") no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index"><img src="{% static '/images/optimus/Frame 60200.png' %}" alt="optimus logo" width="155px"></a>
+          </div>
+    
+          <div class="links">
+            {% if user.is_authenticated %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a href="/home">{{ user.name }}</a></li>
+            </ul>
+            {% else %}
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="./support">Support</a></li>
+              <li><a class="link-btn" href="/login">Login</a></li>
+              <li><a class="" href="/sign-up">Register</li>
+            </ul>
+            {%  endif %}
+          </div>
+  
+          <div class="menu-bar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+
+    <section class="about-hero">
+
+    </section>
+
+    <section class="header-section">
+        <h1 data-aos="zoom-in-up">Create your own customized, professional online presence.</h1>
+
+        <p data-aos="zoom-in-down">
+            With the help of our sophisticated technologies,
+             anyone may create a distinctive, credible online presence.
+              You may find the features and solutions you need to construct a professional website with
+             complete creative freedom, regardless of your level of experience.
+            </p>
+    </section>
+
+    <section class="mission-section">
+
+        <div class="mission-grid">
+            <div data-aos="zoom-out-up">
+                <img class="mission-img" src="{% static "\Images\optimus\help-clients.png" %}" alt="">
+            </div>
+        
+            <div>
+                <div class="mission-header" data-aos="zoom-out-in">Our Mission</div>
+                <p class="mission-para" data-aos="zoom-out-up">
+                    Optimus is a platform that  enables anyone to express themselves and 
+                    establish an online presence. No matter if you're a business owner, 
+                    designer, developer, musician, photographer, or owner of a restaurant,
+                     you've find specialized tools to help you build a high-quality website.
+                    </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="team-section">
+        <h2 class="team-header" data-aos="zoom-in-up">Our Team</h2>
+
+        <div class="team-grid">
+
+            <div data-aos="fade-up">
+                <div class="team-img" >
+                    <img src="{% static "\Images\optimus\Frame 60375.png" %}" alt="">
+                </div>
+
+                <div class="name">Lake Mark</div>
+                <div class="role">Chief Executive Officer</div>
+            </div>
+
+             <div data-aos="fade-down">
+                <div class="team-img">
+                    <img src="{%static "\Images\optimus\Frame 60375-1.png" %}" alt="">
+                </div>
+
+                <div class="name">Stacy Brooke</div>
+                <div class="role">Managing Director</div>
+            </div>
+
+            <div data-aos="fade-right">
+                <div class="team-img">
+                    <img src="{% static "\Images\optimus\Frame 60375-2.png" %}" alt="">
+                </div>
+
+                <div class="name">Joan Mercy</div>
+                <div class="role">Human Resource Manager</div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="team-img">
+                    <img src="{% static "\Images\optimus\Frame 60375-3.png" %}" alt="">
+                </div>
+
+                <div class="name">Mike Scholes</div>
+                <div class="role">Chief Technology Officer</div>
+            </div>
+
+            <div data-aos="fade-up">
+                <div class="team-img">
+                    <img src="{% static "\Images\optimus\Frame 60375-4.png" %}" alt="">
+                </div>
+
+                <div class="name">Greg Gates</div>
+                <div class="role">Head of Product Design</div>
+            </div>
+
+            <div data-aos="fade-right">
+                <div class="team-img">
+                    <img src="{% static "\Images\optimus\Frame 60375-5.png" %}" alt="">
+                </div>
+
+                <div class="name">Austine Cain</div>
+                <div class="role">Head of Marketing</div>
+            </div>
+
+            <div data-aos="fade-up">
+                <div class="team-img">
+                    <img src="{% static "\Images\optimus\Frame 60375-6.png" %}" alt="">
+                </div>
+
+                <div class="name">Tosin Clarke</div>
+                <div class="role">Head of Software Engineering</div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="team-img">
+                    <img src="{% static "\Images\optimus\Frame 60375-7.png" %}" alt="">
+                </div>
+
+                <div class="name">Promise Eddie</div>
+                <div class="role">Head of Logistics</div>
+            </div>
+        
+    </section>
+
+    <section class="bottom-get-started">
+        <div class="bottom-grid">
+            <div>
+                <h3 class="bottom-header" data-aos="fade-left">Get started with Optimus</h3>
+
+                <p class="bottom-para" data-aos="zoom-in-down">
+                    Use Optimus to create your landing pages <br> and 
+                    other effective digital tools.
+                </p>
+
+                <div class="btn-wrapper" data-aos="fade-right">
+                    <a href="/signup">
+                        <button class="btn-get-started">Get Started</button>
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <img src="{% static "\Images\optimus\Frame 60312.png" %}" alt="" class="bottom-img">
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="footer-main">
+        <div class="container">
+         <div class="footer-wrapper">
+          <div class="templates">
+            <h3>Templates</h3>
+            <ul>
+              <li><a href="/landingPage">Landing page</a></li>
+              <li><a href="/portfolio">Portfolio</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </div>
+      
+          <div class="career">
+            <h3>Career</h3>
+            <ul>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Contact support</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+      
+          <div class="partners">
+            <h3>Partners</h3>
+            <ul>
+              <li><a href="#">Partner with us</a></li>
+            </ul>
+          </div>
+      
+          <div>
+          </div>
+      
+         </div>
+          <div class="footer-details">
+             <div class="mb-3">
+              <span class="terms"><a href="">Terms and conditions</a></span>
+              <span class="privacy"><a href="">Privacy policy</a></span>
+             </div>
+            
+      
+            <p class="copy">&copy; 2022 Optimus Limited</p>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script src="{% static "\js\script.js" %}"></script>
+</body>
+</html>
