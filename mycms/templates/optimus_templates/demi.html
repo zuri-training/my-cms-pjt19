@@ -1,26 +1,36 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="demi.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css
-    "> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/demi.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
    
     <title>GRIDS AND GRADIENTS BLOG</title>
+
+    <style>
+        .image
+        {
+            background: url("{% static 'Images/demimore-images/Frame 60473.png' %}");
+            background-size: cover;
+            padding-top: 420px;
+        }
+    </style>
+
 </head> 
 <body> 
     <div class="nav-center">
     <div class="nav">
         <!-- nav header -->
         <div class="nav-header">
-          <img src="images\optimus.png" class="logo" alt="logo" />
+          <!-- <img src="{% static 'Images/demimore-images/optimus.png' %}" class="logo" alt="logo" /> -->
         </div>
         <ul> 
-            <button class ="Edit"> Edit this site </button>
+            <!-- <button class ="Edit"> Edit this site </button> -->
         </ul>
         </div>
         </div>
@@ -48,7 +58,7 @@
         <section>
             <div class="blog">
                 <div class="user">
-                    <img src="./images/Ellipse 21-3.png" class="img-2">
+                    <img src="{% static 'Images/demimore-images/Ellipse 21-3.png' %}" class="img-2">
 
                     <!--End of image details-->
                  <div class="user-details">
@@ -75,9 +85,9 @@
 
     </p> </blockquote>
     <div class="middle"> 
-        <img src="images\Line 159.png" alt="">
-        <img src="images\Digital design is like painting, except the painting never dries. Neville Brody.png" alt="Perfect" class="perfect">
-        <img src="images\Line 159.png" alt="">
+        <img src="{% static 'Images/demimore-images/Line 159.png' %}" alt="">
+        <img src="{% static 'Images/demimore-images/Digital design is like painting, except the painting never dries. Neville Brody.png' %}" alt="Perfect" class="perfect">
+        <img src="{% static 'Images/demimore-images/Line 159.png' %}" alt="">
 </div>
    
         </div>

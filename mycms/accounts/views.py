@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from .forms import RegisterForm
 from django.contrib.auth.decorators import login_required
+from builder.models import UserTemplate
 
 from django.views.decorators.csrf import csrf_protect 
 
@@ -30,7 +31,8 @@ def logout_view(request):
 @login_required(login_url='/login/')
 
 def home(request):
-  return render(request, 'allTemplates.html')
+  usertemplates = UserTemplate.objects.all().filter(created_by=request.user)
+  return render(request, 'user_templates.html', {"usertemplates":usertemplates})
 
 @login_required(login_url='/login/')
 def portfolio(request):

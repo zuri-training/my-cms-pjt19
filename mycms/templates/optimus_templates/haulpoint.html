@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     />
     
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link rel="stylesheet" href="haulpoint.css">
+    <link rel="stylesheet" href="{% static 'css/haulpoint.css' %}">
     <title>Haul Point</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
     <div class="nav-center">
       <!-- nav header -->
       <div class="nav-header">
-     <img  class = "logo" src="Images\Logo - Haul.Point.png" alt="logo">
+     <img  class = "logo" src="{% static '/Images/haulpoint_images/Logo - Haul.Point.png' %}" alt="logo">
         <button class="nav-toggle">
           <i class="fas fa-bars"></i>
         </button>
@@ -76,7 +76,7 @@
             </div> 
        </div>
         <div class="illustartion">
-<img id = "illustration" src="Images\Group 1.png" class="img-fluid d-sm-block" />            
+<img id = "illustration" src="{% static '/Images/haulpoint_images/Group 1.png' %}" class="img-fluid d-sm-block" />            
     </div>
     </div>
     </div>
@@ -88,19 +88,19 @@
     <div class="services">
       
       <div class="haul">
-      <img class="Haulage" src="Images\Haulage.png" alt="Haulage">
+      <img class="Haulage" src="{% static '/Images/haulpoint_images/Haulage.png' %}" alt="Haulage">
       <p> Haulage</p>
     </div>
     <div class="transport">
-      <img  class = "transportation" src="Images\Transportation.png" alt="Transportation">
+      <img  class = "transportation" src="{% static '/Images/haulpoint_images/Transportation.png' %}" alt="Transportation">
       <p> Transportation</p>
       </div>
 <div class="ware">
-    <img  class = "Warehouse" src="Images\Warehouse.png" alt="Warehouse">
+    <img  class = "Warehouse" src="{% static '/Images/haulpoint_images/Warehouse.png' %}" alt="Warehouse">
     <p> Warehouse </p>
    </div>
 <div class="courier">
- <img  class = "Courier" src="Images\Courier Services.png" alt="Courier">
+ <img  class = "Courier" src="{% static '/Images/haulpoint_images/Courier Services.png' %}" alt="Courier">
  <p> Courier Services </p>
    </div>
     
@@ -115,9 +115,9 @@
           
           <div class="Reviews">
             
-            <img class = "Benita" src="Images\Frame 59911.png" alt="" srcset="">
-          <img  class = "Audrey" src="Images\Frame 59912.png" alt="" srcset="">
-          <img  class = "Segun" src="Images\Frame 59913.png" alt="" srcset="">
+            <img class = "Benita" src="{% static '/Images/haulpoint_images/Frame 59911.png' %}" alt="" srcset="">
+          <img  class = "Audrey" src="{% static '/Images/haulpoint_images/Frame 59912.png' %}" alt="" srcset="">
+          <img  class = "Segun" src="{% static '/Images/haulpoint_images/Frame 59913.png' %}" alt="" srcset="">
           </div>
         </div>
          </section>
@@ -150,14 +150,14 @@
                         <div class="text">
                          <h1> Get a better experience when you download our app </h1>
                               <div class="app-store">
-                                <img class="IOS" src="Images\iOS-getApp.png" alt="IOS">
-                                <img class="Google" src="Images\Google-GetApp.png" alt="google">
+                                <img class="IOS" src="{% static '/Images/haulpoint_images/iOS-getApp.png' %}" alt="IOS">
+                                <img class="Google" src="{% static '/Images/haulpoint_images/Google-GetApp.png' %}" alt="google">
                                 
                               
                               </div>
                         </div>
                    <div class="illustartion">
-                    <img id = "download" src="Images\Frame.png" class="img-fluid d-sm-block" />            
+                    <img id = "download" src="{% static '/Images/haulpoint_images/Frame.png' %}" class="img-fluid d-sm-block" />            
                         </div>
                       </section> 
                 <!---end of download-->
@@ -165,7 +165,7 @@
                 <footer class="footer">
                   <div class="container py-5 ">
                     <div class="row py-4">
-                      <div class="col-lg-6 col-md-6 mb-4 mb-lg-0"><img class ="white-haul" src="Images\Haul.Point - White.png" alt="" width="180" class="mb-3">
+                      <div class="col-lg-6 col-md-6 mb-4 mb-lg-0"><img class ="white-haul" src="{% static '/Images/haulpoint_images/Haul.Point - White.png' %}" alt="" width="180" class="mb-3">
                         <p class="font-italic text-white" id="connect"> Connect with us: haulpoint@gmail.com</p>
                         <ul class="list-inline mt-4">
                           <li class="list-inline-item" id="social-media"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -207,6 +207,6 @@
                   </div>
 </footer>
 <!---end of footer-->              
-    <script src="haulpoint.js"></script>
+    <script src="{% static 'js/haulpoint.js' %}"></script>
 </body>
 </html>

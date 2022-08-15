@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/chop.css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/chop.css' %}" />
 </head>
 
 <body>
-    {% comment %} HEADER STARTS HERE {% endcomment %}
+    <!-- {% comment %} HEADER STARTS HERE {% endcomment %} -->
     <header class="" id="header">
         <img src="/image/optimus logo.png" alt="" class="header-image" />
 
@@ -21,10 +21,10 @@
             <a class="btn button-primary" type="button" id="edit">Edit this site</a>
         </div>
     </header>
-{% comment %} HEADER ENDS HERE {% endcomment %}
+<!-- {% comment %} HEADER ENDS HERE {% endcomment %} -->
 
 
-{% comment %} NAVBAR STARTS  {% endcomment %}
+<!-- {% comment %} NAVBAR STARTS  {% endcomment %} -->
     <nav class="" id="nav">
         <a href="#"><img src="/image/ChopChop logo.png" alt="" class="header-image" /></a>
 
@@ -45,10 +45,10 @@
             </ul>
         </div>
     </nav>
-{% comment %} NAVBAR ENDS HERE {% endcomment %}
+<!-- {% comment %} NAVBAR ENDS HERE {% endcomment %} -->
 
 
-{% comment %} FIXED SLIDER {% endcomment %}
+<!-- {% comment %} FIXED SLIDER {% endcomment %} -->
     <div id="slider">
         <img src="/image/Rectangle 108.png" class="img-fluid img-adjust" alt="" />
 
@@ -65,9 +65,9 @@
             </div>
         </div>
     </div>
-{% comment %} FIXED SLIDER {% endcomment %}
+<!-- {% comment %} FIXED SLIDER {% endcomment %} -->
 
-{% comment %} MAIN BODY contenT {% endcomment %}
+<!-- {% comment %} MAIN BODY contenT {% endcomment %} -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 content-column-1">
@@ -188,9 +188,9 @@
             </div>
         </div>
     </div>
-    {% comment %} END OF BODY CONTENT  {% endcomment %}
+    <!-- {% comment %} END OF BODY CONTENT  {% endcomment %} -->
 
-{% comment %} LAST SECTION OF THE BODY {% endcomment %}
+<!-- {% comment %} LAST SECTION OF THE BODY {% endcomment %} -->
     <div class="container-fluid last">
         <form>
             <input type="text" placeholder="*Enter your email address here*" class="form-input" />
@@ -199,7 +199,7 @@
         </form>
     </div>
 
-    {% comment %} FOOTER {% endcomment %}
+    <!-- {% comment %} FOOTER {% endcomment %} -->
     <footer>
         <p class="pfoot">Courtesy 2022 by ChopChop. All rights reserved.</p>
     </footer>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8"/>
@@ -10,9 +10,8 @@
 	<!-- bootstrap icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<!-- style.css -->
-	<link rel="stylesheet" type="text/css" href="./honeylens.css"/>
-	<!-- jquery cdn -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/honeylens.css' %}"/>
+	
 </head>
 <body>
 
@@ -20,7 +19,7 @@
 		<div class="row">
 			<div class="col-md-12 navbar">
 				<a href="index.html" class="logo navbar-brand offset-md-2">
-                    <img src="./honeylensimages/Logo - HoneyLen Photography.png" width="30%">
+                    <img src="{% static '/Images/honeylensimages/Logo - HoneyLen Photography.png' %}" width="30%">
                 </a>
 				<ul class="nav">
 					<li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-chat-square-dots"></i></i></a></li>
@@ -31,18 +30,19 @@
 
 			<!-- Header	 -->
 
-			<div id="honeyLensCarousel" class="carousel slide" data-ride="carousel">
+			<!-- <div id="honeyLensCarousel" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
 			    <li data-target="#honeyLensCarousel" data-slide-to="0" class="active"></li>
 			    <li data-target="#honeyLensCarousel" data-slide-to="1"></li>
 			    <li data-target="#honeyLensCarousel" data-slide-to="2"></li>
                 <li data-target="#honeyLensCarousel" data-slide-to="3"></li>
-			  </ol>
+			  </ol> -->
 
               <!-- slide wrapper -->
-			  <div class="carousel-inner">
+			  <!-- <div class="carousel-inner">
 			    <div class="carousel-item active">
 			    	<div class="info">
+						<img src="{% static '/Images/honeylensimages/Desktop-3.png' %}" style="width:100%; height:100%">
 			      		<h1>Wedding Photography</h1>
 			      	</div>
 			    </div>
@@ -62,7 +62,7 @@
 			      	</div>
 			    </div>
 			  </div>
-			</div>
+			</div> -->
 
 			<!-- Header Ends -->
 		</div>
@@ -73,7 +73,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class=" weddingimg">
-					<img src="./honeylensimages/Frame 60223.png" width="100%">
+					<img src="{% static '/Images/honeylensimages/Frame 60223.png' %}" width="100%">
 				</div>
 				<div class="wedding-text">
 					<h1> Wedding</h1>
@@ -97,7 +97,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class=" birthdayimg">
-					<img src="./honeylensimages/Frame 60224.png" width="100%">
+					<img src="{% static '/Images/honeylensimages/Frame 60224.png' %}" width="100%">
 				</div>
 				<div class="birthday-text">
 					<h1> Birthday</h1>
@@ -120,7 +120,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class=" real-estateimg">
-					<img src="./honeylensimages/Frame 60225.png" width="100%">
+					<img src="{% static '/Images/honeylensimages/Frame 60225.png' %}" width="100%">
 				</div>
 				<div class="real-estate-text">
 					<h1> Real Estate</h1>
@@ -143,7 +143,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class=" natureimg">
-					<img src="./honeylensimages/Frame 60226.png" width="100%">
+					<img src="{% static '/Images/honeylensimages/Frame 60226.png' %}" width="100%">
 				</div>
 				<div class="nature-text">
 					<h1> Nature</h1>
@@ -162,8 +162,8 @@
 	</section>
 
 	<section id="hl-footer">
-		<div class="hl-logo">
-			<img src="./honeylensimages/Logo - HoneyLen Photography.png" width="20%">
+		<div class="hl-logo d-flex justify-content-center">
+			<img src="{% static '/Images/honeylensimages/Logo - HoneyLen Photography.png' %}" width="20%">
 		</div>
 		<div class="hl-footericons">
 			<i class="bi bi-facebook text-primary .bg-light.bg-gradient"></i>
@@ -184,6 +184,8 @@
 
 	<!-- scripts -->
 	<!-- bootstrap javascript cdn -->
+	<!-- jquery cdn -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
