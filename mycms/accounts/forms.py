@@ -7,7 +7,9 @@ class RegisterForm(UserCreationForm):
     fields = [
       "email",
       'name',
-      'mobile'
+      'mobile',
+      'password1',
+      'password2'
     ]
   
   
